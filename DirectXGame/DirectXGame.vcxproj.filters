@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="App">
+      <UniqueIdentifier>{b7f6f3e8-7f9b-4081-b24d-bd625feb59a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine">
+      <UniqueIdentifier>{91f108b9-70e6-417c-bd7c-bd6eb9707368}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\WindowingSystem">
+      <UniqueIdentifier>{85aaefe6-07de-4871-8626-0b8d93985816}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine">
+      <UniqueIdentifier>{9d362827-16b3-4699-89ac-e9c3dd149f43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Math">
+      <UniqueIdentifier>{c6278c3b-4823-4694-a03b-ef24419fdb74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\InputSystem">
+      <UniqueIdentifier>{71a0b448-ac2b-4c80-9c78-dc8a446df303}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\RenderSystem">
+      <UniqueIdentifier>{07313e48-e4fd-4413-adc2-fb485aadd82e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\RenderSystem\ConstantBuffer">
+      <UniqueIdentifier>{efd2ca7b-5aa4-4475-9f08-6eea7d94cc37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\RenderSystem\DeviceContext">
+      <UniqueIdentifier>{bfd89d4b-e449-4230-acaf-f4e58a08a29a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\RenderSystem\IndexBuffer">
+      <UniqueIdentifier>{909f0da0-2095-4045-9aef-84781085925b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\RenderSystem\PixelShader">
+      <UniqueIdentifier>{63fa91d1-5f5a-4fca-969f-76d437b903da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\RenderSystem\SwapChain">
+      <UniqueIdentifier>{68712e03-6662-4279-a950-bddbd9fe2364}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\RenderSystem\VertexBuffer">
+      <UniqueIdentifier>{569824a7-f083-4741-a2ac-998fae52fa24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\RenderSystem\VertexShader">
+      <UniqueIdentifier>{ce0c5348-c553-40db-ba36-ae6e9958a99f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\ResourceManager">
+      <UniqueIdentifier>{fff79945-8531-4e49-8aa9-6055fb4970a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\ResourceManager\TextureManager">
+      <UniqueIdentifier>{bfcd3e81-8c49-4003-98f2-c56ad502b0d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\RenderSystem\Blender">
+      <UniqueIdentifier>{8ff2696b-3cb0-4988-8be6-16606d193817}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Manager">
+      <UniqueIdentifier>{a46e80f5-6298-4fc1-a882-e05c3c61860e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Manager\GameObjectManager">
+      <UniqueIdentifier>{8c0818a3-5890-4d1d-8cb5-18190c80c5eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Primitives">
+      <UniqueIdentifier>{826781f3-b841-4230-8e53-c4afc48d2474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Primitives\Cube">
+      <UniqueIdentifier>{d459de60-73bb-4541-a8fd-20eea77003f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\ResourceManager\MeshManager">
+      <UniqueIdentifier>{6eb964fe-69d2-40b0-bb2c-fa5331426204}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Components">
+      <UniqueIdentifier>{62e52718-699f-49b1-92c8-f479b74f1ac5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Components\Rendering">
+      <UniqueIdentifier>{9c445d33-179d-4202-886b-272626ce2b14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Components\Rendering\Camera">
+      <UniqueIdentifier>{bf2e90bb-2147-4804-9a46-453d01a4ab3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Primitives\Plane">
+      <UniqueIdentifier>{98b7950e-0513-4942-b3b1-d93ee45f7a93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\ShaderEngine">
+      <UniqueIdentifier>{cdb3d525-e7e5-4705-b4c2-696aa2941089}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\ShaderEngine\ShaderManager">
+      <UniqueIdentifier>{3c17da98-1a38-4f5b-a6eb-8235d3841631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\RenderBufferEngine">
+      <UniqueIdentifier>{ff7d5078-9444-4639-a944-161edbfad3df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\RenderBufferEngine\RenderBufferManager">
+      <UniqueIdentifier>{d2aef8fe-0bce-4dc2-a19f-bf138b720628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\IMGUI">
+      <UniqueIdentifier>{5685aeaf-7d92-4a83-871d-aba5de82038e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\BackEndTools">
+      <UniqueIdentifier>{024feb38-aee3-4629-99d9-9b17223e30f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\BackEndTools\EngineTime">
+      <UniqueIdentifier>{14483c31-cef8-4b4a-ad94-0de3cd48efb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\BackEndTools\ContantBufferTypes">
+      <UniqueIdentifier>{0239c0bf-7175-42b8-839f-62a4e367e277}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\UI">
+      <UniqueIdentifier>{2b3fd728-ba59-46d7-91c2-807926c087c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\UI\Menu Toolbar">
+      <UniqueIdentifier>{94282bcf-3f7f-48da-a0b5-b2ca5cc8e288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\UI\UIBackendTools">
+      <UniqueIdentifier>{2fd07d42-d221-42b1-bc70-c8397e62609b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\Shaders">
+      <UniqueIdentifier>{13cc3a85-f169-413f-a356-b36ac06c8976}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\Shaders\PixelShaders">
+      <UniqueIdentifier>{b0f3f142-5e14-4f4f-acc1-967863be04fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\Shaders\VertexShaders">
+      <UniqueIdentifier>{fd78c96f-c241-4a57-9456-1e35f1a83635}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\FileExplorer">
+      <UniqueIdentifier>{4e396e81-0041-4802-92d2-f08638fd6d24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Components\Rendering\RenderToTexture">
+      <UniqueIdentifier>{f8d70be7-6a4f-4b98-b1b2-bf0d0934f64d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\UI\Hierarchy">
+      <UniqueIdentifier>{91676bc7-d5b2-41b4-b3eb-102b07b5638d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\UI\Content Browser">
+      <UniqueIdentifier>{74733073-6fc6-4ae9-9caa-0ea4e36fd82a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\UI\Scene View">
+      <UniqueIdentifier>{f2b16ecc-e2c3-4a27-9566-6e75acc8ef82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\UI\ConsoleWindow">
+      <UniqueIdentifier>{b597e833-9458-47cb-b935-ba0974fd42b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\UI\Inspector">
+      <UniqueIdentifier>{f2fc40ea-6df2-4030-bb19-1c0a24a1bfee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\BaseSystem">
+      <UniqueIdentifier>{75fb5894-b8da-4cf9-9d5f-2291371310ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\BaseSystem\PhysicsSystem">
+      <UniqueIdentifier>{c7abe2f7-44f8-4038-a471-02ce18bdf1a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\BaseSystem\TransformSystem">
+      <UniqueIdentifier>{421e0885-117f-456e-b9c4-d17acd7ca0eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Primitives\SkyBox">
+      <UniqueIdentifier>{87aeb098-5324-401b-aaea-a4ce50c36edf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\BackEndTools\EngineBackend">
+      <UniqueIdentifier>{b4ee725f-0344-41c9-a2fe-fdd3bc307e9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\BackEndTools\ConsoleLogger">
+      <UniqueIdentifier>{b685bb94-8477-4209-83a9-3b6e4f22875f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\UI\SceneStates">
+      <UniqueIdentifier>{c1888ba6-c8b3-4951-b716-0944ed99ec6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\Shaders\PixelShaders\PointLight">
+      <UniqueIdentifier>{e76bcc1e-23b4-4f64-a5db-c60d0645bcd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\Shaders\VertexShaders\PointLight">
+      <UniqueIdentifier>{0dea00e3-125e-49f8-ad8a-4ba1e01143ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\BackEndTools\EditorAction">
+      <UniqueIdentifier>{929556d2-0e55-4a8b-b8ce-73a5b530d9ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\BackEndTools\SceneManagement">
+      <UniqueIdentifier>{9d707c2d-dc4f-4af8-9104-89447630880d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\UI\ViewMode">
+      <UniqueIdentifier>{72f01dc6-05ac-4702-b3ef-9a502f97db9d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BNS_main.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_Window.cpp">
+      <Filter>GameEngine\WindowingSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_GraphicsEngine.cpp">
+      <Filter>GameEngine\GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_SwapChain.cpp">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\SwapChain</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_DeviceContext.cpp">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\DeviceContext</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_VertexBuffer.cpp">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\VertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_VertexShader.cpp">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\VertexShader</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_PixelShader.cpp">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\PixelShader</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_ConstantBuffer.cpp">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\ConstantBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_IndexBuffer.cpp">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\IndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_InputSystem.cpp">
+      <Filter>GameEngine\InputSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_RenderSystem.cpp">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_Resource.cpp">
+      <Filter>GameEngine\GraphicsEngine\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_ResourceManager.cpp">
+      <Filter>GameEngine\GraphicsEngine\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_Texture.cpp">
+      <Filter>GameEngine\GraphicsEngine\ResourceManager\TextureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_TextureManager.cpp">
+      <Filter>GameEngine\GraphicsEngine\ResourceManager\TextureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_Blender.cpp">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\Blender</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_AGameObject.cpp">
+      <Filter>GameEngine\Manager\GameObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_GameObjectManager.cpp">
+      <Filter>GameEngine\Manager\GameObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_Cube.cpp">
+      <Filter>GameEngine\Primitives\Cube</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_EngineTime.cpp">
+      <Filter>GameEngine\BackEndTools\EngineTime</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_PrimitiveCreation.cpp">
+      <Filter>GameEngine\Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_Mesh.cpp">
+      <Filter>GameEngine\GraphicsEngine\ResourceManager\MeshManager</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_MeshManager.cpp">
+      <Filter>GameEngine\GraphicsEngine\ResourceManager\MeshManager</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_Camera.cpp">
+      <Filter>GameEngine\Components\Rendering\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_Plane.cpp">
+      <Filter>GameEngine\Primitives\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_CameraHandler.cpp">
+      <Filter>GameEngine\Components\Rendering\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_PixelShaderManager.cpp">
+      <Filter>GameEngine\ShaderEngine\ShaderManager</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_VertexShaderManager.cpp">
+      <Filter>GameEngine\ShaderEngine\ShaderManager</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_ShaderEngine.cpp">
+      <Filter>GameEngine\ShaderEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_RenderBufferEngine.cpp">
+      <Filter>GameEngine\RenderBufferEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_InputLayoutManager.cpp">
+      <Filter>GameEngine\RenderBufferEngine\RenderBufferManager</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_Color.cpp">
+      <Filter>GameEngine\BackEndTools</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_AUIScreen.cpp">
+      <Filter>GameEngine\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_UIManager.cpp">
+      <Filter>GameEngine\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_MenuToolbar_UI.cpp">
+      <Filter>GameEngine\UI\Menu Toolbar</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_UICreation.cpp">
+      <Filter>GameEngine\UI\UIBackendTools</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_FileExplorer.cpp">
+      <Filter>GameEngine\FileExplorer</Filter>
+    </ClCompile>
+    <ClCompile Include="IMGUI\imgui.cpp">
+      <Filter>GameEngine\GraphicsEngine\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="IMGUI\imgui_demo.cpp">
+      <Filter>GameEngine\GraphicsEngine\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="IMGUI\imgui_draw.cpp">
+      <Filter>GameEngine\GraphicsEngine\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="IMGUI\imgui_impl_dx11.cpp">
+      <Filter>GameEngine\GraphicsEngine\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="IMGUI\imgui_impl_win32.cpp">
+      <Filter>GameEngine\GraphicsEngine\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="IMGUI\imgui_tables.cpp">
+      <Filter>GameEngine\GraphicsEngine\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="IMGUI\imgui_widgets.cpp">
+      <Filter>GameEngine\GraphicsEngine\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_RenderToTexture.cpp">
+      <Filter>GameEngine\Components\Rendering\RenderToTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_Hierarchy_UI.cpp">
+      <Filter>GameEngine\UI\Hierarchy</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_SceneView_UI.cpp">
+      <Filter>GameEngine\UI\Scene View</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_ContentBrowser_UI.cpp">
+      <Filter>GameEngine\UI\Content Browser</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_Console_UI.cpp">
+      <Filter>GameEngine\UI\ConsoleWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_Inspector_UI.cpp">
+      <Filter>GameEngine\UI\Inspector</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_PhysicsSystem.cpp">
+      <Filter>GameEngine\BaseSystem\PhysicsSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_BaseComponentSystem.cpp">
+      <Filter>GameEngine\BaseSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_PhysicsComponent.cpp">
+      <Filter>GameEngine\BaseSystem\PhysicsSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_AComponent.cpp">
+      <Filter>GameEngine\BaseSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_ASystem.cpp">
+      <Filter>GameEngine\BaseSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_TransformComponent.cpp">
+      <Filter>GameEngine\BaseSystem\TransformSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_TransformSystem.cpp">
+      <Filter>GameEngine\BaseSystem\TransformSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_SkyBox.cpp">
+      <Filter>GameEngine\Primitives\SkyBox</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_EngineBackend.cpp">
+      <Filter>GameEngine\BackEndTools\EngineBackend</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_Log.cpp">
+      <Filter>GameEngine\BackEndTools\ConsoleLogger</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_SceneStates_UI.cpp">
+      <Filter>GameEngine\UI\SceneStates</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_EditorAction.cpp">
+      <Filter>GameEngine\BackEndTools\EditorAction</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneReader.cpp">
+      <Filter>GameEngine\BackEndTools\SceneManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneWriter.cpp">
+      <Filter>GameEngine\BackEndTools\SceneManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_ActionHistory.cpp">
+      <Filter>GameEngine\BackEndTools\EditorAction</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_AppWindow.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="BNS_ViewMode_UI.cpp">
+      <Filter>GameEngine\UI\ViewMode</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BNS_AppWindow.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_Window.h">
+      <Filter>GameEngine\WindowingSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_GraphicsEngine.h">
+      <Filter>GameEngine\GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_SwapChain.h">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\SwapChain</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_DeviceContext.h">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\DeviceContext</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_VertexBuffer.h">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_VertexShader.h">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\VertexShader</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_PixelShader.h">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\PixelShader</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_ConstantBuffer.h">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\ConstantBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3D.h">
+      <Filter>GameEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix4x4.h">
+      <Filter>GameEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_IndexBuffer.h">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\IndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_InputSystem.h">
+      <Filter>GameEngine\InputSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_InputListener.h">
+      <Filter>GameEngine\InputSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>GameEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector4D.h">
+      <Filter>GameEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_RenderSystem.h">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_Resource.h">
+      <Filter>GameEngine\GraphicsEngine\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_ResourceManager.h">
+      <Filter>GameEngine\GraphicsEngine\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_Texture.h">
+      <Filter>GameEngine\GraphicsEngine\ResourceManager\TextureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_TextureManager.h">
+      <Filter>GameEngine\GraphicsEngine\ResourceManager\TextureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2D.h">
+      <Filter>GameEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_Blender.h">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\Blender</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_AGameObject.h">
+      <Filter>GameEngine\Manager\GameObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_GameObjectManager.h">
+      <Filter>GameEngine\Manager\GameObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_Cube.h">
+      <Filter>GameEngine\Primitives\Cube</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_EngineTime.h">
+      <Filter>GameEngine\BackEndTools\EngineTime</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_PrimitiveCreation.h">
+      <Filter>GameEngine\Primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_ContantBufferTypes.h">
+      <Filter>GameEngine\BackEndTools\ContantBufferTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_RenderPolicies.h">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\Blender</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_PassRender.h">
+      <Filter>GameEngine\GraphicsEngine\RenderSystem\Blender</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_Mesh.h">
+      <Filter>GameEngine\GraphicsEngine\ResourceManager\MeshManager</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_MeshManager.h">
+      <Filter>GameEngine\GraphicsEngine\ResourceManager\MeshManager</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexMesh.h">
+      <Filter>GameEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_Camera.h">
+      <Filter>GameEngine\Components\Rendering\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_Plane.h">
+      <Filter>GameEngine\Primitives\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_CameraHandler.h">
+      <Filter>GameEngine\Components\Rendering\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_EnumHandler.h">
+      <Filter>GameEngine\BackEndTools</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_PixelShaderManager.h">
+      <Filter>GameEngine\ShaderEngine\ShaderManager</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_VertexShaderManager.h">
+      <Filter>GameEngine\ShaderEngine\ShaderManager</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_ShaderEngine.h">
+      <Filter>GameEngine\ShaderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_StructHandler.h">
+      <Filter>GameEngine\BackEndTools</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_RenderBufferEngine.h">
+      <Filter>GameEngine\RenderBufferEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_InputLayoutManager.h">
+      <Filter>GameEngine\RenderBufferEngine\RenderBufferManager</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_Color.h">
+      <Filter>GameEngine\BackEndTools</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_Prerequisites.h">
+      <Filter>GameEngine\BackEndTools</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_AUIScreen.h">
+      <Filter>GameEngine\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_UIManager.h">
+      <Filter>GameEngine\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_MenuToolbar_UI.h">
+      <Filter>GameEngine\UI\Menu Toolbar</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_UI_Prerequisites.h">
+      <Filter>GameEngine\UI\UIBackendTools</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_UICreation.h">
+      <Filter>GameEngine\UI\UIBackendTools</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_FileExplorer.h">
+      <Filter>GameEngine\FileExplorer</Filter>
+    </ClInclude>
+    <ClInclude Include="IMGUI\imconfig.h">
+      <Filter>GameEngine\GraphicsEngine\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="IMGUI\imgui.h">
+      <Filter>GameEngine\GraphicsEngine\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="IMGUI\imgui_impl_dx11.h">
+      <Filter>GameEngine\GraphicsEngine\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="IMGUI\imgui_impl_win32.h">
+      <Filter>GameEngine\GraphicsEngine\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="IMGUI\imgui_internal.h">
+      <Filter>GameEngine\GraphicsEngine\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="IMGUI\imstb_textedit.h">
+      <Filter>GameEngine\GraphicsEngine\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="IMGUI\imstb_rectpack.h">
+      <Filter>GameEngine\GraphicsEngine\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="IMGUI\imstb_truetype.h">
+      <Filter>GameEngine\GraphicsEngine\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_RenderToTexture.h">
+      <Filter>GameEngine\Components\Rendering\RenderToTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_Hierarchy_UI.h">
+      <Filter>GameEngine\UI\Hierarchy</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_SceneView_UI.h">
+      <Filter>GameEngine\UI\Scene View</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_ContentBrowser_UI.h">
+      <Filter>GameEngine\UI\Content Browser</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_Console_UI.h">
+      <Filter>GameEngine\UI\ConsoleWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_Inspector_UI.h">
+      <Filter>GameEngine\UI\Inspector</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_PhysicsSystem.h">
+      <Filter>GameEngine\BaseSystem\PhysicsSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_BaseComponentSystem.h">
+      <Filter>GameEngine\BaseSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_PhysicsComponent.h">
+      <Filter>GameEngine\BaseSystem\PhysicsSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_AComponent.h">
+      <Filter>GameEngine\BaseSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_Physics_Prerequisites.h">
+      <Filter>GameEngine\BaseSystem\PhysicsSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_ASystem.h">
+      <Filter>GameEngine\BaseSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_TransformComponent.h">
+      <Filter>GameEngine\BaseSystem\TransformSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_TransformSystem.h">
+      <Filter>GameEngine\BaseSystem\TransformSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_SkyBox.h">
+      <Filter>GameEngine\Primitives\SkyBox</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_EngineBackend.h">
+      <Filter>GameEngine\BackEndTools\EngineBackend</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_Log.h">
+      <Filter>GameEngine\BackEndTools\ConsoleLogger</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_SceneStates_UI.h">
+      <Filter>GameEngine\UI\SceneStates</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_EditorAction.h">
+      <Filter>GameEngine\BackEndTools\EditorAction</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneReader.h">
+      <Filter>GameEngine\BackEndTools\SceneManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneWriter.h">
+      <Filter>GameEngine\BackEndTools\SceneManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_ActionHistory.h">
+      <Filter>GameEngine\BackEndTools\EditorAction</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_StringUtils.h">
+      <Filter>GameEngine\BackEndTools</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_MathUtils.h">
+      <Filter>GameEngine\BackEndTools</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="BNS_ViewMode_UI.h">
+      <Filter>GameEngine\UI\ViewMode</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="BNS_PixelTex.hlsl">
+      <Filter>GameEngine\GraphicsEngine\Shaders\PixelShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BNS_PixelMesh.hlsl">
+      <Filter>GameEngine\GraphicsEngine\Shaders\PixelShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BNS_VertexMeshLayout.hlsl">
+      <Filter>GameEngine\GraphicsEngine\Shaders\VertexShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BNS_VertexTex.hlsl">
+      <Filter>GameEngine\GraphicsEngine\Shaders\VertexShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BNS_VertexColor.hlsl">
+      <Filter>GameEngine\GraphicsEngine\Shaders\VertexShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BNS_VertexColorLerp.hlsl">
+      <Filter>GameEngine\GraphicsEngine\Shaders\VertexShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BNS_PixelColor.hlsl">
+      <Filter>GameEngine\GraphicsEngine\Shaders\PixelShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BNS_PixelColorLerp.hlsl">
+      <Filter>GameEngine\GraphicsEngine\Shaders\PixelShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BNS_PixelLight.hlsl">
+      <Filter>GameEngine\GraphicsEngine\Shaders\PixelShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BNS_VertexLight.hlsl">
+      <Filter>GameEngine\GraphicsEngine\Shaders\VertexShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BNS_PixelSkyBox.hlsl">
+      <Filter>GameEngine\GraphicsEngine\Shaders\PixelShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BNS_PixelEarth.hlsl">
+      <Filter>GameEngine\GraphicsEngine\Shaders\PixelShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="BNS_PixelPointLight.hlsl">
+      <Filter>GameEngine\GraphicsEngine\Shaders\PixelShaders\PointLight</Filter>
+    </FxCompile>
+    <FxCompile Include="BNS_VertexPointLight.hlsl">
+      <Filter>GameEngine\GraphicsEngine\Shaders\VertexShaders\PointLight</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>
