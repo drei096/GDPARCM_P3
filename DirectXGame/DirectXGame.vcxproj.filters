@@ -389,7 +389,9 @@
     <ClCompile Include="IETThread.cpp">
       <Filter>Threading</Filter>
     </ClCompile>
-    <ClCompile Include="IETSemaphore.cpp" />
+    <ClCompile Include="IETSemaphore.cpp">
+      <Filter>Threading</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BNS_AppWindow.h">
@@ -651,7 +653,9 @@
     <ClInclude Include="IETThread.h">
       <Filter>Threading</Filter>
     </ClInclude>
-    <ClInclude Include="IETSemaphore.h" />
+    <ClInclude Include="IETSemaphore.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="BNS_PixelTex.hlsl">
