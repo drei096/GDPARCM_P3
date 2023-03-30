@@ -159,6 +159,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AScene.cpp" />
     <ClCompile Include="BNS_ActionHistory.cpp" />
     <ClCompile Include="BNS_AComponent.cpp" />
     <ClCompile Include="BNS_AppWindow.cpp" />
@@ -227,11 +228,13 @@
     <ClCompile Include="IMGUI\imgui_widgets.cpp" />
     <ClCompile Include="BNS_PhysicsComponent.cpp" />
     <ClCompile Include="BNS_PhysicsSystem.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="SceneReader.cpp" />
     <ClCompile Include="SceneWriter.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AScene.h" />
     <ClInclude Include="BNS_ActionHistory.h" />
     <ClInclude Include="BNS_AComponent.h" />
     <ClInclude Include="BNS_ASystem.h" />
@@ -309,6 +312,7 @@
     <ClInclude Include="BNS_UICreation.h" />
     <ClInclude Include="BNS_UIManager.h" />
     <ClInclude Include="BNS_UI_Prerequisites.h" />
+    <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SceneReader.h" />
     <ClInclude Include="SceneWriter.h" />
     <ClInclude Include="Utils.h" />

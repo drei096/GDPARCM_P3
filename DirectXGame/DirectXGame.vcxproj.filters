@@ -178,8 +178,14 @@
     <Filter Include="GameEngine\UI\ViewMode">
       <UniqueIdentifier>{72f01dc6-05ac-4702-b3ef-9a502f97db9d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Threading">
+    <Filter Include="PARCM">
+      <UniqueIdentifier>{c286c5fa-1c16-467b-8daa-71e4e0ef1925}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PARCM\Threading">
       <UniqueIdentifier>{46c84551-bf05-4176-bed8-5f5b473edc76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PARCM\Scene">
+      <UniqueIdentifier>{6d83094c-900b-4161-8220-27e2f1c251f3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -387,11 +393,15 @@
       <Filter>GameEngine\UI\ViewMode</Filter>
     </ClCompile>
     <ClCompile Include="IETThread.cpp">
-      <Filter>Threading</Filter>
+      <Filter>PARCM\Threading</Filter>
     </ClCompile>
     <ClCompile Include="IETSemaphore.cpp">
-      <Filter>Threading</Filter>
+      <Filter>PARCM\Threading</Filter>
     </ClCompile>
+    <ClCompile Include="AScene.cpp">
+      <Filter>PARCM\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BNS_AppWindow.h">
@@ -651,11 +661,15 @@
       <Filter>GameEngine\UI\ViewMode</Filter>
     </ClInclude>
     <ClInclude Include="IETThread.h">
-      <Filter>Threading</Filter>
+      <Filter>PARCM\Threading</Filter>
     </ClInclude>
     <ClInclude Include="IETSemaphore.h">
-      <Filter>Threading</Filter>
+      <Filter>PARCM\Threading</Filter>
     </ClInclude>
+    <ClInclude Include="AScene.h">
+      <Filter>PARCM\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="BNS_PixelTex.hlsl">
