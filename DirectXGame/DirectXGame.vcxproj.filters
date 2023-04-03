@@ -181,11 +181,14 @@
     <Filter Include="PARCM">
       <UniqueIdentifier>{c286c5fa-1c16-467b-8daa-71e4e0ef1925}</UniqueIdentifier>
     </Filter>
-    <Filter Include="PARCM\Threading">
-      <UniqueIdentifier>{46c84551-bf05-4176-bed8-5f5b473edc76}</UniqueIdentifier>
-    </Filter>
     <Filter Include="PARCM\Scene">
       <UniqueIdentifier>{6d83094c-900b-4161-8220-27e2f1c251f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PARCM\Pooling">
+      <UniqueIdentifier>{9ea08696-2c68-4f8b-8616-af9fc77582cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PARCM\Pooling\Threading">
+      <UniqueIdentifier>{46c84551-bf05-4176-bed8-5f5b473edc76}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -393,10 +396,10 @@
       <Filter>GameEngine\UI\ViewMode</Filter>
     </ClCompile>
     <ClCompile Include="IETThread.cpp">
-      <Filter>PARCM\Threading</Filter>
+      <Filter>PARCM\Pooling\Threading</Filter>
     </ClCompile>
     <ClCompile Include="IETSemaphore.cpp">
-      <Filter>PARCM\Threading</Filter>
+      <Filter>PARCM\Pooling\Threading</Filter>
     </ClCompile>
     <ClCompile Include="AScene.cpp">
       <Filter>PARCM\Scene</Filter>
@@ -406,6 +409,15 @@
     </ClCompile>
     <ClCompile Include="ObjectScene.cpp">
       <Filter>PARCM\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="IWorkerAction.cpp">
+      <Filter>PARCM\Pooling</Filter>
+    </ClCompile>
+    <ClCompile Include="PoolWorkerThread.cpp">
+      <Filter>PARCM\Pooling</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadPool.cpp">
+      <Filter>PARCM\Pooling</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -666,10 +678,10 @@
       <Filter>GameEngine\UI\ViewMode</Filter>
     </ClInclude>
     <ClInclude Include="IETThread.h">
-      <Filter>PARCM\Threading</Filter>
+      <Filter>PARCM\Pooling\Threading</Filter>
     </ClInclude>
     <ClInclude Include="IETSemaphore.h">
-      <Filter>PARCM\Threading</Filter>
+      <Filter>PARCM\Pooling\Threading</Filter>
     </ClInclude>
     <ClInclude Include="AScene.h">
       <Filter>PARCM\Scene</Filter>
@@ -679,6 +691,15 @@
     </ClInclude>
     <ClInclude Include="ObjectScene.h">
       <Filter>PARCM\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="IWorkerAction.h">
+      <Filter>PARCM\Pooling</Filter>
+    </ClInclude>
+    <ClInclude Include="PoolWorkerThread.h">
+      <Filter>PARCM\Pooling</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadPool.h">
+      <Filter>PARCM\Pooling</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

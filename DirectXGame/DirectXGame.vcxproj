@@ -228,10 +228,13 @@
     <ClCompile Include="IMGUI\imgui_widgets.cpp" />
     <ClCompile Include="BNS_PhysicsComponent.cpp" />
     <ClCompile Include="BNS_PhysicsSystem.cpp" />
+    <ClCompile Include="IWorkerAction.cpp" />
     <ClCompile Include="ObjectScene.cpp" />
+    <ClCompile Include="PoolWorkerThread.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="SceneReader.cpp" />
     <ClCompile Include="SceneWriter.cpp" />
+    <ClCompile Include="ThreadPool.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -287,6 +290,7 @@
     <ClInclude Include="IMGUI\imstb_rectpack.h" />
     <ClInclude Include="IMGUI\imstb_textedit.h" />
     <ClInclude Include="IMGUI\imstb_truetype.h" />
+    <ClInclude Include="IWorkerAction.h" />
     <ClInclude Include="Matrix4x4.h" />
     <ClInclude Include="BNS_MenuToolbar_UI.h" />
     <ClInclude Include="BNS_Mesh.h" />
@@ -314,9 +318,11 @@
     <ClInclude Include="BNS_UICreation.h" />
     <ClInclude Include="BNS_UIManager.h" />
     <ClInclude Include="BNS_UI_Prerequisites.h" />
+    <ClInclude Include="PoolWorkerThread.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SceneReader.h" />
     <ClInclude Include="SceneWriter.h" />
+    <ClInclude Include="ThreadPool.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="Vector2D.h" />
     <ClInclude Include="Vector3D.h" />
