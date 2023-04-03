@@ -228,6 +228,7 @@
     <ClCompile Include="IMGUI\imgui_widgets.cpp" />
     <ClCompile Include="BNS_PhysicsComponent.cpp" />
     <ClCompile Include="BNS_PhysicsSystem.cpp" />
+    <ClCompile Include="ObjectScene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="SceneReader.cpp" />
     <ClCompile Include="SceneWriter.cpp" />
@@ -296,6 +297,7 @@
     <ClInclude Include="BNS_Plane.h" />
     <ClInclude Include="BNS_PhysicsComponent.h" />
     <ClInclude Include="BNS_PhysicsSystem.h" />
+    <ClInclude Include="ObjectScene.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="BNS_Prerequisites.h" />
     <ClInclude Include="BNS_PrimitiveCreation.h" />

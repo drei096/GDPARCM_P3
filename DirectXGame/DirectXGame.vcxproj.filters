@@ -404,6 +404,9 @@
     <ClCompile Include="SceneManager.cpp">
       <Filter>PARCM\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="ObjectScene.cpp">
+      <Filter>PARCM\Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BNS_AppWindow.h">
@@ -672,6 +675,9 @@
       <Filter>PARCM\Scene</Filter>
     </ClInclude>
     <ClInclude Include="SceneManager.h">
+      <Filter>PARCM\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectScene.h">
       <Filter>PARCM\Scene</Filter>
     </ClInclude>
   </ItemGroup>

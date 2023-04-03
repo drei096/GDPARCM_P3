@@ -10,7 +10,8 @@ public:
 	AScene(std::string name, int index);
 	~AScene();
 
-	virtual void loadScene() = 0;
+	virtual void loadObjects() = 0;
+	virtual void unloadObjects() = 0;
 
 private:
 	std::string name;
