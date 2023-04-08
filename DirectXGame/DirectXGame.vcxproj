@@ -190,6 +190,7 @@
     <ClCompile Include="BNS_MenuToolbar_UI.cpp" />
     <ClCompile Include="BNS_Mesh.cpp" />
     <ClCompile Include="BNS_MeshManager.cpp" />
+    <ClCompile Include="BNS_PARCMLoader_UI.cpp" />
     <ClCompile Include="BNS_PixelShader.cpp" />
     <ClCompile Include="BNS_PixelShaderManager.cpp" />
     <ClCompile Include="BNS_Plane.cpp" />
@@ -269,6 +270,7 @@
     <ClInclude Include="BNS_Inspector_UI.h" />
     <ClInclude Include="BNS_Log.h" />
     <ClInclude Include="BNS_MathUtils.h" />
+    <ClInclude Include="BNS_PARCMLoader_UI.h" />
     <ClInclude Include="BNS_Physics_Prerequisites.h" />
     <ClInclude Include="BNS_RenderToTexture.h" />
     <ClInclude Include="BNS_SceneStates_UI.h" />

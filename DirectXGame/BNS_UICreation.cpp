@@ -11,6 +11,7 @@
 #include "BNS_Inspector_UI.h"
 #include "BNS_SceneStates_UI.h"
 #include "BNS_ViewMode_UI.h"
+#include "BNS_PARCMLoader_UI.h"
 
 BNS_UICreation::BNS_UICreation()
 {
@@ -95,5 +96,13 @@ void BNS_UICreation::CreateViewModeUI()
 	BNS_ViewMode_UI* screen = new BNS_ViewMode_UI("View Mode", currentID++);
 	AUIScreen_Ptr ptr_screen(screen);
 	BNS_UIManager::GetInstance()->uiTable[BNS_UINames::VIEW_MODE] = ptr_screen;
+	BNS_UIManager::GetInstance()->_uiScreenList.push_back(ptr_screen);
+}
+
+void BNS_UICreation::CreatePARCMLoaderUI()
+{
+	BNS_PARCMLoader_UI* screen = new BNS_PARCMLoader_UI("PARCM Loader", currentID++);
+	AUIScreen_Ptr ptr_screen(screen);
+	BNS_UIManager::GetInstance()->uiTable[BNS_UINames::PARCM_LOADER_WINDOW] = ptr_screen;
 	BNS_UIManager::GetInstance()->_uiScreenList.push_back(ptr_screen);
 }

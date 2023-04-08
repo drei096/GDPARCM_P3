@@ -40,6 +40,9 @@ void BNS_UIManager::Initialize(BNS_AppWindow* appW, HWND hwnd, const RenderToTex
 	m_ui_creation->CreateConsoleUI();
 	m_ui_creation->CreateInspectorUI();
 	m_ui_creation->CreateSceneStatesUI();
+
+	//for parcm
+	m_ui_creation->CreatePARCMLoaderUI();
 	//m_ui_creation->CreateInspectorUI();
 }
 

@@ -53,7 +53,8 @@ enum class BNS_UINames
 	GAMEOBJECT_SCREEN,
 	CONSOLE_SCREEN,
 	STATE_SCREEN,
-	VIEW_MODE
+	VIEW_MODE,
+	PARCM_LOADER_WINDOW
 };
 
 enum class ComponentType

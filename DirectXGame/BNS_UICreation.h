@@ -19,6 +19,7 @@ public:
 	void CreateInspectorUI();
 	void CreateSceneStatesUI();
 	void CreateViewModeUI();
+	void CreatePARCMLoaderUI();
 
 private:
 	int currentID = 0;

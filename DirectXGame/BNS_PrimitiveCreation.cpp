@@ -84,7 +84,7 @@ void BNS_PrimitiveCreation::CreateCylinder()
 	CheckGameObjectName(name);
 	BNS_Cube* cube = new BNS_Cube(name, BNS_ObjectTypes::CYLINDER);
 	cube->SetMesh(L"Assets\\Meshes\\Cylinder.OBJ");
-	cube->SetTexture(L"Assets\\Textures\\GREY.png");
+	cube->SetTexture(L"Assets\\Textures\\Grey.png");
 	cube->SetVertexShader(BNS_VertexShaderType::TEXTURE);
 	cube->SetPixelShader(BNS_PixelShaderType::TEXTURE);
 	cube->SetPosition(Vector3D{ 0, 0, 0 });
