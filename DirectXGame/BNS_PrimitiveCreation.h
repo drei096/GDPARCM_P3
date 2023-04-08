@@ -38,6 +38,22 @@ public:
 	void CreateEarth();
 	void CreateSkyBox();
 	void CreateScene();
+
+	void CreateCube(float posx, float posy, float posz);
+	void CreateCylinder(float posx, float posy, float posz);
+	void CreateTexturedCube(float posx, float posy, float posz);
+	void CreatePhysicsPlane(float posx, float posy, float posz);
+	void CreatePlane(float posx, float posy, float posz);
+	void CreateSphere(float posx, float posy, float posz);
+	void CreateCapsule(float posx, float posy, float posz);
+	void CreateTeapot(float posx, float posy, float posz);
+	void CreateStatue(float posx, float posy, float posz);
+	void CreateBunny(float posx, float posy, float posz);
+	void CreateArmadillo(float posx, float posy, float posz);
+	void CreateEarth(float posx, float posy, float posz);
+	void CreateSkyBox(float posx, float posy, float posz);
+	void CreateScene(float posx, float posy, float posz);
+
 	void CreateMeshFromFile(std::string full_filepath, std::string localName);
 
 	void createPrimitiveFromFile(std::string name, BNS_ObjectTypes type, Vector3D pos, Vector3D rot, Vector3D scale, bool hasPhysics = false, float mass = 0, int BodyType = -1);
