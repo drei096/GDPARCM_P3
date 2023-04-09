@@ -190,6 +190,12 @@
     <Filter Include="PARCM\Pooling\Threading">
       <UniqueIdentifier>{46c84551-bf05-4176-bed8-5f5b473edc76}</UniqueIdentifier>
     </Filter>
+    <Filter Include="PARCM\UI">
+      <UniqueIdentifier>{274d0d5a-3650-4285-9545-24090b06cea2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PARCM\Scene\SceneList">
+      <UniqueIdentifier>{3d043a37-ff01-4c5c-ab81-a925438593ad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BNS_main.cpp">
@@ -418,6 +424,21 @@
     </ClCompile>
     <ClCompile Include="ThreadPool.cpp">
       <Filter>PARCM\Pooling</Filter>
+    </ClCompile>
+    <ClCompile Include="BNS_PARCMLoader_UI.cpp">
+      <Filter>PARCM\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectLoader.cpp">
+      <Filter>PARCM\Pooling\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene1.cpp">
+      <Filter>PARCM\Scene\SceneList</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene2.cpp">
+      <Filter>PARCM\Scene\SceneList</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene3.cpp">
+      <Filter>PARCM\Scene\SceneList</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -700,6 +721,24 @@
     </ClInclude>
     <ClInclude Include="ThreadPool.h">
       <Filter>PARCM\Pooling</Filter>
+    </ClInclude>
+    <ClInclude Include="IExecutionEvent.h">
+      <Filter>PARCM\Pooling\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="BNS_PARCMLoader_UI.h">
+      <Filter>PARCM\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectLoader.h">
+      <Filter>PARCM\Pooling\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene1.h">
+      <Filter>PARCM\Scene\SceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene2.h">
+      <Filter>PARCM\Scene\SceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene3.h">
+      <Filter>PARCM\Scene\SceneList</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

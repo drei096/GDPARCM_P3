@@ -75,6 +75,14 @@ enum class LogType
 	Error
 };
 
+enum class BNS_MeshType
+{
+	TEAPOT = 0,
+	STATUE,
+	BUNNY,
+	ARMADILLO
+};
+
 class BNS_EnumHandler
 {
 	

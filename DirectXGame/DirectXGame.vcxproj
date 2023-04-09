@@ -230,8 +230,12 @@
     <ClCompile Include="BNS_PhysicsComponent.cpp" />
     <ClCompile Include="BNS_PhysicsSystem.cpp" />
     <ClCompile Include="IWorkerAction.cpp" />
+    <ClCompile Include="ObjectLoader.cpp" />
     <ClCompile Include="ObjectScene.cpp" />
     <ClCompile Include="PoolWorkerThread.cpp" />
+    <ClCompile Include="Scene1.cpp" />
+    <ClCompile Include="Scene2.cpp" />
+    <ClCompile Include="Scene3.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="SceneReader.cpp" />
     <ClCompile Include="SceneWriter.cpp" />
@@ -284,6 +288,7 @@
     <ClInclude Include="BNS_ViewMode_UI.h" />
     <ClInclude Include="IETSemaphore.h" />
     <ClInclude Include="IETThread.h" />
+    <ClInclude Include="IExecutionEvent.h" />
     <ClInclude Include="IMGUI\imconfig.h" />
     <ClInclude Include="IMGUI\imgui.h" />
     <ClInclude Include="IMGUI\imgui_impl_dx11.h" />
@@ -303,6 +308,7 @@
     <ClInclude Include="BNS_Plane.h" />
     <ClInclude Include="BNS_PhysicsComponent.h" />
     <ClInclude Include="BNS_PhysicsSystem.h" />
+    <ClInclude Include="ObjectLoader.h" />
     <ClInclude Include="ObjectScene.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="BNS_Prerequisites.h" />
@@ -321,6 +327,9 @@
     <ClInclude Include="BNS_UIManager.h" />
     <ClInclude Include="BNS_UI_Prerequisites.h" />
     <ClInclude Include="PoolWorkerThread.h" />
+    <ClInclude Include="Scene1.h" />
+    <ClInclude Include="Scene2.h" />
+    <ClInclude Include="Scene3.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SceneReader.h" />
     <ClInclude Include="SceneWriter.h" />

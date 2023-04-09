@@ -2,6 +2,8 @@
 #include "AScene.h"
 #include <vector>
 
+class ThreadPool;
+class IETSemaphore;
 class SceneManager
 {
 private:
@@ -13,9 +15,27 @@ private:
 public:
 	void addScene(AScene* scene);
 	void initializeScenes();
-	std::vector<AScene*>* getSceneList();
+	std::vector<AScene*> &getSceneList();
+	ThreadPool* getThreadPool();
+
+	void loadSceneByIndex(int index);
+	void loadAllScenes();
+
+public:
+	static void create();
+	static void release();
+	static SceneManager* Instance();
+
+public:
+	IETSemaphore* sceneLoadSem;
+	IETSemaphore* objLoadSem;
 
 private:
 	std::vector<AScene*> sceneList;
+
+	ThreadPool* threadPool;
+
+private:
+	static SceneManager* sharedInstance;
 };
 

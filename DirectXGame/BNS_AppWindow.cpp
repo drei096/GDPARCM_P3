@@ -22,6 +22,7 @@
 #include "BNS_TransformSystem.h"
 #include "BNS_EngineBackend.h"
 #include "BNS_ActionHistory.h"
+#include "SceneManager.h"
 
 
 BNS_AppWindow::BNS_AppWindow()
@@ -44,7 +45,9 @@ void BNS_AppWindow::onCreate()
 
 	BNS_EngineBackend::getInstance()->setMode(BNS_EngineBackend::EDITOR);
 	BNS_ActionHistory::Initialize();
+	SceneManager::Instance()->initializeScenes();
 
+	
 
 	// create swap chain
 	RECT rc = this->getClientWindowRect();
@@ -65,7 +68,7 @@ void BNS_AppWindow::onCreate()
 	BNS_UIManager::Initialize(this, m_hwnd, m_scene_views);
 	// Create base skybox
 	//BNS_PrimitiveCreation::Instance()->CreateSkyBox();
-	
+
 }
 
 void BNS_AppWindow::render()

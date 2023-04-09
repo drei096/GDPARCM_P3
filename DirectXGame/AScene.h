@@ -16,7 +16,5 @@ public:
 private:
 	std::string name;
 	int index;
-	std::vector<Vector3D> posList;
-	std::vector<BNS_AGameObject> objectList;
 };
 

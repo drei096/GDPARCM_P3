@@ -6,6 +6,7 @@
 #include "BNS_ShaderEngine.h"
 #include "BNS_RenderBufferEngine.h"
 #include "BNS_Log.h"
+#include "SceneManager.h"
 
 int main()
 {
@@ -23,6 +24,8 @@ int main()
 		BNS_GameObjectManager::create();
 		// initialize our BNS_PrimitiveCreation
 		BNS_PrimitiveCreation::create();
+		// initialize our SceneManager
+		SceneManager::create();
 		// initialize our BNS_Log
 		BNS_Log::create();
 	}
@@ -35,6 +38,7 @@ int main()
 		}
 		catch (...) {
 			BNS_Log::release();
+			SceneManager::release();
 			BNS_PrimitiveCreation::release();
 			BNS_GameObjectManager::release();
 			BNS_InputSystem::release();
@@ -50,6 +54,7 @@ int main()
 	 * Will follow the First in, Last out principle.
 	 */
 	BNS_Log::release();
+	SceneManager::release();
 	BNS_PrimitiveCreation::release();
 	BNS_GameObjectManager::release();
 	BNS_InputSystem::release();

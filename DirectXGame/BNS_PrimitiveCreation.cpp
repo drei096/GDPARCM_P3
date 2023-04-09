@@ -415,7 +415,7 @@ void BNS_PrimitiveCreation::CreateCapsule(float posx, float posy, float posz)
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
 }
 
-void BNS_PrimitiveCreation::CreateTeapot(float posx, float posy, float posz)
+BNS_AGameObject* BNS_PrimitiveCreation::CreateTeapot(float posx, float posy, float posz)
 {
 	std::string name = "teapot";
 	CheckGameObjectName(name);
@@ -432,9 +432,11 @@ void BNS_PrimitiveCreation::CreateTeapot(float posx, float posy, float posz)
 
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
 	BNS_ActionHistory::GetInstance()->recordAction(cube->GetName());
+
+	return cube;
 }
 
-void BNS_PrimitiveCreation::CreateStatue(float posx, float posy, float posz)
+BNS_AGameObject* BNS_PrimitiveCreation::CreateStatue(float posx, float posy, float posz)
 {
 	std::string name = "statue";
 	CheckGameObjectName(name);
@@ -449,9 +451,11 @@ void BNS_PrimitiveCreation::CreateStatue(float posx, float posy, float posz)
 	cube->AttachComponent(transformComp);
 
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
+
+	return cube;
 }
 
-void BNS_PrimitiveCreation::CreateBunny(float posx, float posy, float posz)
+BNS_AGameObject* BNS_PrimitiveCreation::CreateBunny(float posx, float posy, float posz)
 {
 	std::string name = "bunny";
 	CheckGameObjectName(name);
@@ -467,9 +471,11 @@ void BNS_PrimitiveCreation::CreateBunny(float posx, float posy, float posz)
 	cube->AttachComponent(transformComp);
 
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
+
+	return cube;
 }
 
-void BNS_PrimitiveCreation::CreateArmadillo(float posx, float posy, float posz)
+BNS_AGameObject* BNS_PrimitiveCreation::CreateArmadillo(float posx, float posy, float posz)
 {
 	std::string name = "armadillo";
 	CheckGameObjectName(name);
@@ -485,6 +491,8 @@ void BNS_PrimitiveCreation::CreateArmadillo(float posx, float posy, float posz)
 	cube->AttachComponent(transformComp);
 
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
+
+	return cube;
 }
 
 void BNS_PrimitiveCreation::CreateEarth(float posx, float posy, float posz)
