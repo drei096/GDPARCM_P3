@@ -12,7 +12,6 @@ BNS_PhysicsComponent::BNS_PhysicsComponent(String name, BNS_AGameObject* owner) 
 
 BNS_PhysicsComponent::~BNS_PhysicsComponent()
 {
-	BNS_BaseComponentSystem::GetInstance()->GetPhysicsSystem()->UnRegisterComponent(this);
 	BNS_AComponent::~BNS_AComponent();
 }
 

@@ -409,7 +409,7 @@ void BNS_PrimitiveCreation::CreateCapsule(float posx, float posy, float posz)
 	cube->SetPosition(Vector3D{ posx, posy, posz });
 
 	// adding transform component
-	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
+	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", NULL);
 	cube->AttachComponent(transformComp);
 
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
@@ -427,7 +427,7 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateTeapot(float posx, float posy, flo
 	cube->SetPosition(Vector3D{ posx, posy, posz });
 
 	// adding transform component
-	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
+	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", NULL);
 	cube->AttachComponent(transformComp);
 
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
@@ -447,7 +447,7 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateStatue(float posx, float posy, flo
 	cube->SetPosition(Vector3D{ posx, posy, posz });
 
 	// adding transform component
-	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
+	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", NULL);
 	cube->AttachComponent(transformComp);
 
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
@@ -467,7 +467,7 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateBunny(float posx, float posy, floa
 	cube->SetPosition(Vector3D{ posx, posy, posz });
 
 	// adding transform component
-	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
+	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", NULL);
 	cube->AttachComponent(transformComp);
 
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
@@ -487,7 +487,7 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateArmadillo(float posx, float posy, 
 	cube->SetPosition(Vector3D{ posx, posy, posz });
 
 	// adding transform component
-	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
+	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", NULL);
 	cube->AttachComponent(transformComp);
 
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
@@ -510,7 +510,7 @@ void BNS_PrimitiveCreation::CreateEarth(float posx, float posy, float posz)
 	cube->SetPosition(Vector3D{ posx, posy, posz });
 
 	// adding transform component
-	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
+	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", NULL);
 	cube->AttachComponent(transformComp);
 
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);

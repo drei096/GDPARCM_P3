@@ -14,6 +14,9 @@ Scene1::~Scene1()
 
 void Scene1::loadObjects()
 {
+	if (hasLoaded)
+		return;
+
 	SceneManager::Instance()->sceneLoadSem->acquire(1);
 
 	this->maxObjects = 6;

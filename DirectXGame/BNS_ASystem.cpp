@@ -46,6 +46,8 @@ void BNS_ASystem<TList>::UnRegisterComponent(TList* component)
 		{
 			std::cout << "Component Erase" << "\n";
 			componentList.erase(componentList.begin() + index);
+			componentList.shrink_to_fit();
+			std::cout << componentList.size() << std::endl;
 		}
 		
 	}

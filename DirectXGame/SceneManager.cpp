@@ -64,6 +64,40 @@ void SceneManager::loadAllScenes()
 		scene->loadObjects();
 }
 
+void SceneManager::unloadSceneByIndex(int index)
+{
+	if (this->sceneList[index] == NULL)
+		return;
+
+	this->sceneList[index]->unloadObjects();
+}
+
+void SceneManager::unloadAllScenes()
+{
+	if (this->sceneList.empty())
+		return;
+
+	for (auto scene : this->sceneList)
+		scene->unloadObjects();
+}
+
+void SceneManager::toggleSceneByIndex(int index)
+{
+	if (this->sceneList[index] == NULL)
+		return;
+
+	this->sceneList[index]->toggleObjects();
+}
+
+void SceneManager::toggleAllScenes()
+{
+	if (this->sceneList.empty())
+		return;
+
+	for (auto scene : this->sceneList)
+		scene->toggleObjects();
+}
+
 void SceneManager::create()
 {
 	if (SceneManager::sharedInstance)

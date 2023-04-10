@@ -14,6 +14,7 @@ public:
 	// Inherited via AScene
 	virtual void loadObjects() = 0;
 	virtual void unloadObjects() override;
+	virtual void toggleObjects() override;
 
 	// Inherited via IExecutionEvent
 	virtual void onFinishedExecution() override;
@@ -24,6 +25,7 @@ public:
 public:
 	int countLoaded = 0;
 	int maxObjects = 0;
+	bool hasLoaded = false;
 
 protected:
 	std::vector<Vector3D> posList;

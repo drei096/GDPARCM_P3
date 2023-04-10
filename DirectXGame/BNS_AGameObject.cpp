@@ -27,6 +27,7 @@ BNS_AGameObject::~BNS_AGameObject()
 	for (int i = 0; i < componentList.size(); ++i)
 	{
 		componentList[i]->DetachOwner();
+		this->DetachComponent(componentList[i]);
 	}
 	componentList.clear();
 }

@@ -16,36 +16,45 @@ void BNS_PARCMLoader_UI::DrawUI()
 	ImGui::Begin("PARCM Scene Loader");
 	ImGui::Columns(3);
 
+	for (int i = 0; i < 5; i++) 
+	{
+		std::string stringName = "Scene" + std::to_string(i + 1);
+		ImGui::Text(stringName.c_str());
+		ImGui::Spacing();
+		if (ImGui::Button(("Load##" + std::to_string(i)).c_str(), ImVec2(100, 0)))
+		{
+			SceneManager::Instance()->loadSceneByIndex(i);
+		}
+		ImGui::SameLine();
+		if (ImGui::Button(("Unload##" + std::to_string(i)).c_str(), ImVec2(100, 0)))
+		{
+			SceneManager::Instance()->unloadSceneByIndex(i);
+		}
+		ImGui::SameLine();
+		if (ImGui::Button(("Toggle##" + std::to_string(i)).c_str(), ImVec2(100, 0)))
+		{
+			SceneManager::Instance()->toggleSceneByIndex(i);
+		}
+		ImGui::Spacing();
+	}
 
-	if (ImGui::Button("Scene 1", ImVec2(100, 0)))
-	{
-		SceneManager::Instance()->loadSceneByIndex(0);
-	}
+	ImGui::Text("Load All Scenes");
 	ImGui::Spacing();
-	if(ImGui::Button("Scene 2", ImVec2(100, 0)))
-	{
-		SceneManager::Instance()->loadSceneByIndex(1);
-	}
-	ImGui::Spacing();
-	if(ImGui::Button("Scene 3", ImVec2(100, 0)))
-	{
-		SceneManager::Instance()->loadSceneByIndex(2);
-	}
-	ImGui::Spacing();
-	if(ImGui::Button("Scene 4", ImVec2(100, 0)))
-	{
-		SceneManager::Instance()->loadSceneByIndex(3);
-	}
-	ImGui::Spacing();
-	if(ImGui::Button("Scene 5", ImVec2(100, 0)))
-	{
-		SceneManager::Instance()->loadSceneByIndex(4);
-	}
-	ImGui::Spacing();
-	if(ImGui::Button("Load All Scenes", ImVec2(100, 0)))
+	if (ImGui::Button("Load##5", ImVec2(100, 0)))
 	{
 		SceneManager::Instance()->loadAllScenes();
 	}
+	ImGui::SameLine();
+	if (ImGui::Button("Unload##5", ImVec2(100, 0)))
+	{
+		SceneManager::Instance()->unloadAllScenes();
+	}
+	ImGui::SameLine();
+	if (ImGui::Button("Toggle##5", ImVec2(100, 0)))
+	{
+		SceneManager::Instance()->toggleAllScenes();
+	}
+	ImGui::Spacing();
 
 
 
@@ -54,17 +63,26 @@ void BNS_PARCMLoader_UI::DrawUI()
 	if (dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[0])->maxObjects != 0 && SceneManager::Instance()->getSceneList()[0] != NULL)
 	{
 		ImGui::Text("Scene 1 Loading");
-		ImGui::ProgressBar((float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[0])->countLoaded / (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[0])->maxObjects, ImVec2(200.0f, 0.0f));
+		float progress = (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[0])->countLoaded / (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[0])->maxObjects;
+		ImGui::ProgressBar(progress, ImVec2(200.0f, 0.0f));
+		if (progress == 1)
+			dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[0])->hasLoaded = true;
 	}
 	if (dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[1])->maxObjects != 0 && SceneManager::Instance()->getSceneList()[1] != NULL)
 	{
 		ImGui::Text("Scene 2 Loading");
-		ImGui::ProgressBar((float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[1])->countLoaded / (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[1])->maxObjects, ImVec2(200.0f, 0.0f));
+		float progress = (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[1])->countLoaded / (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[1])->maxObjects;
+		ImGui::ProgressBar(progress, ImVec2(200.0f, 0.0f));
+		if (progress == 1)
+			dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[1])->hasLoaded = true;
 	}
 	if (dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[2])->maxObjects != 0 && SceneManager::Instance()->getSceneList()[2] != NULL)
 	{
 		ImGui::Text("Scene 3 Loading");
-		ImGui::ProgressBar((float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[2])->countLoaded / (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[2])->maxObjects, ImVec2(200.0f, 0.0f));
+		float progress = (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[2])->countLoaded / (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[2])->maxObjects;
+		ImGui::ProgressBar(progress, ImVec2(200.0f, 0.0f));
+		if (progress == 1)
+			dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[2])->hasLoaded = true;
 	}
 
 	ImGui::NextColumn();

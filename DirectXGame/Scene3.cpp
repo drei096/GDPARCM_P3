@@ -14,6 +14,9 @@ Scene3::~Scene3()
 
 void Scene3::loadObjects()
 {
+	if (hasLoaded)
+		return;
+
 	SceneManager::Instance()->sceneLoadSem->acquire(1);
 
 	this->maxObjects = 3;

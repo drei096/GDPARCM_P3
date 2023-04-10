@@ -1,6 +1,7 @@
 #include "ObjectScene.h"
 #include "SceneManager.h"
 #include "IETSemaphore.h"
+#include "BNS_GameObjectManager.h"
 
 ObjectScene::ObjectScene(std::string name, int index) : AScene(name, index)
 {
@@ -38,6 +39,32 @@ ObjectScene::~ObjectScene()
 
 void ObjectScene::unloadObjects()
 {
+	if (!hasLoaded)
+		return;
+
+	SceneManager::Instance()->sceneLoadSem->acquire(1);
+
+	this->countLoaded = 0;
+
+	for (auto object : this->objectList) 
+	{
+		BNS_GameObjectManager::get()->DeleteObject(object);
+	}
+
+	for (auto occupiedPos : this->occupiedList)
+		this->posList.push_back(occupiedPos);
+
+	this->occupiedList.clear();
+
+	this->hasLoaded = false;
+
+	SceneManager::Instance()->sceneLoadSem->release(1);
+}
+
+void ObjectScene::toggleObjects()
+{
+	for (auto object : this->objectList)
+		object->SetActive(!object->GetActive());
 }
 
 void ObjectScene::onFinishedExecution()

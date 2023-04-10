@@ -21,6 +21,12 @@ public:
 	void loadSceneByIndex(int index);
 	void loadAllScenes();
 
+	void unloadSceneByIndex(int index);
+	void unloadAllScenes();
+
+	void toggleSceneByIndex(int index);
+	void toggleAllScenes();
+
 public:
 	static void create();
 	static void release();

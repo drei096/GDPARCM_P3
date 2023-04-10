@@ -15,8 +15,12 @@ void BNS_TransformSystem::UpdateAllComponents()
 {
 	BNS_ASystem::UpdateAllComponents();
 	//std::cout << "Transform Size: " << componentList.size() << std::endl;
-	for (int i = 0; i < componentList.size(); ++i)
+	if (!componentList.empty()) 
 	{
-		componentList[i]->Perform(BNS_EngineTime::getDeltaTime());
+		for (int i = 0; i < componentList.size(); ++i)
+		{
+			componentList[i]->Perform(BNS_EngineTime::getDeltaTime());
+		}
 	}
+	
 }

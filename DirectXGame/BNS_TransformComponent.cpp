@@ -17,7 +17,6 @@ BNS_TransformComponent::BNS_TransformComponent(String name, BNS_AGameObject* own
 
 BNS_TransformComponent::~BNS_TransformComponent()
 {
-	BNS_BaseComponentSystem::GetInstance()->GetTransformSystem()->UnRegisterComponent(this);
 	BNS_AComponent::~BNS_AComponent();
 }
 
