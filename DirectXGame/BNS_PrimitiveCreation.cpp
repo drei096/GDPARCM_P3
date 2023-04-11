@@ -437,7 +437,7 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateTeapot(float posx, float posy, flo
 	cube->AttachComponent(transformComp);
 
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
-	BNS_ActionHistory::GetInstance()->recordAction(cube->GetName());
+	//BNS_ActionHistory::GetInstance()->recordAction(cube->GetName());
 
 	return cube;
 }

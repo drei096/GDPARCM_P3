@@ -440,6 +440,12 @@
     <ClCompile Include="Scene3.cpp">
       <Filter>PARCM\Scene\SceneList</Filter>
     </ClCompile>
+    <ClCompile Include="Scene4.cpp">
+      <Filter>PARCM\Scene\SceneList</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene5.cpp">
+      <Filter>PARCM\Scene\SceneList</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BNS_AppWindow.h">
@@ -738,6 +744,12 @@
       <Filter>PARCM\Scene\SceneList</Filter>
     </ClInclude>
     <ClInclude Include="Scene3.h">
+      <Filter>PARCM\Scene\SceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene4.h">
+      <Filter>PARCM\Scene\SceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene5.h">
       <Filter>PARCM\Scene\SceneList</Filter>
     </ClInclude>
   </ItemGroup>

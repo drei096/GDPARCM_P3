@@ -35,6 +35,7 @@ public:
 public:
 	IETSemaphore* sceneLoadSem;
 	IETSemaphore* objLoadSem;
+	IETSemaphore* objmutex;
 
 private:
 	std::vector<AScene*> sceneList;

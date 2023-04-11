@@ -16,6 +16,7 @@ SceneManager::SceneManager()
 
 	this->sceneLoadSem = new IETSemaphore(1);
 	this->objLoadSem = new IETSemaphore(10);
+	this->objmutex = new IETSemaphore(1);
 }
 
 SceneManager::~SceneManager()

@@ -30,46 +30,42 @@ void ObjectLoader::onStartTask()
 	if (this->meshType == BNS_MeshType::TEAPOT) 
 	{
 		tempRef = BNS_PrimitiveCreation::Instance()->CreateTeapot(pos.m_x, pos.m_y, pos.m_z);
-		sceneRef->addObject(tempRef);
 	}
 	else if (this->meshType == BNS_MeshType::STATUE)
 	{
 		tempRef = BNS_PrimitiveCreation::Instance()->CreateStatue(pos.m_x, pos.m_y, pos.m_z);
-		sceneRef->addObject(tempRef);
 	}
 	else if (this->meshType == BNS_MeshType::BUNNY)
 	{
 		tempRef = BNS_PrimitiveCreation::Instance()->CreateBunny(pos.m_x, pos.m_y, pos.m_z);
-		sceneRef->addObject(tempRef);
 	}
 	else if (this->meshType == BNS_MeshType::ARMADILLO)
 	{
 		tempRef = BNS_PrimitiveCreation::Instance()->CreateArmadillo(pos.m_x, pos.m_y, pos.m_z);
-		sceneRef->addObject(tempRef);
 	}
 	else if (this->meshType == BNS_MeshType::SPHERE)
 	{
 		tempRef = BNS_PrimitiveCreation::Instance()->CreateSphere(pos.m_x, pos.m_y, pos.m_z);
-		sceneRef->addObject(tempRef);
 	}
 	else if (this->meshType == BNS_MeshType::CAPSULE)
 	{
 		tempRef = BNS_PrimitiveCreation::Instance()->CreateCapsule(pos.m_x, pos.m_y, pos.m_z);
-		sceneRef->addObject(tempRef);
 	}
 	else if (this->meshType == BNS_MeshType::EARTH)
 	{
 		tempRef = BNS_PrimitiveCreation::Instance()->CreateEarth(pos.m_x, pos.m_y, pos.m_z);
-		sceneRef->addObject(tempRef);
 	}
 	else if (this->meshType == BNS_MeshType::SAMPLE_SCENE)
 	{
 		tempRef = BNS_PrimitiveCreation::Instance()->CreateScene(pos.m_x, pos.m_y, pos.m_z);
-		sceneRef->addObject(tempRef);
 	}
 
-	if (tempRef != nullptr)
+	if (tempRef != nullptr) {
+		SceneManager::Instance()->objmutex->acquire();
+		sceneRef->addObject(tempRef);
+		SceneManager::Instance()->objmutex->release();
 		tempRef->SetActive(false);
+	}
 
 	this->execEvent->onFinishedExecution();
 	//delete after being done

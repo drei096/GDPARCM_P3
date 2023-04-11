@@ -19,4 +19,5 @@ private:
 	BNS_MeshType meshType;
 	Vector3D pos;
 	IExecutionEvent* execEvent;
+
 };
