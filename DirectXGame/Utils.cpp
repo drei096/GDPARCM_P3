@@ -8,3 +8,11 @@ float Utils::randomFloat(float a, float b)
     float r = random * diff;
     return a + r;
 }
+
+int Utils::randomInt(int a, int b)
+{
+    int random = rand() / RAND_MAX;
+    int diff = b - a;
+    int r = random * diff;
+    return a + r;
+}

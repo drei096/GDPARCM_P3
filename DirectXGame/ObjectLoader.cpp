@@ -47,6 +47,16 @@ void ObjectLoader::onStartTask()
 		tempRef = BNS_PrimitiveCreation::Instance()->CreateArmadillo(pos.m_x, pos.m_y, pos.m_z);
 		sceneRef->addObject(tempRef);
 	}
+	else if (this->meshType == BNS_MeshType::SPHERE)
+	{
+		tempRef = BNS_PrimitiveCreation::Instance()->CreateSphere(pos.m_x, pos.m_y, pos.m_z);
+		sceneRef->addObject(tempRef);
+	}
+	else if (this->meshType == BNS_MeshType::CAPSULE)
+	{
+		tempRef = BNS_PrimitiveCreation::Instance()->CreateCapsule(pos.m_x, pos.m_y, pos.m_z);
+		sceneRef->addObject(tempRef);
+	}
 
 	if (tempRef != NULL)
 		tempRef->SetActive(false);

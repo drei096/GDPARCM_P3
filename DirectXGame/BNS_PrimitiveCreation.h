@@ -44,13 +44,13 @@ public:
 	void CreateTexturedCube(float posx, float posy, float posz);
 	void CreatePhysicsPlane(float posx, float posy, float posz);
 	void CreatePlane(float posx, float posy, float posz);
-	void CreateSphere(float posx, float posy, float posz);
-	void CreateCapsule(float posx, float posy, float posz);
+	BNS_AGameObject* CreateSphere(float posx, float posy, float posz);
+	BNS_AGameObject* CreateCapsule(float posx, float posy, float posz);
 	BNS_AGameObject* CreateTeapot(float posx, float posy, float posz);
 	BNS_AGameObject* CreateStatue(float posx, float posy, float posz);
 	BNS_AGameObject* CreateBunny(float posx, float posy, float posz);
 	BNS_AGameObject* CreateArmadillo(float posx, float posy, float posz);
-	void CreateEarth(float posx, float posy, float posz);
+	BNS_AGameObject* CreateEarth(float posx, float posy, float posz);
 	void CreateSkyBox(float posx, float posy, float posz);
 	void CreateScene(float posx, float posy, float posz);
 

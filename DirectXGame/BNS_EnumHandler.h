@@ -80,7 +80,11 @@ enum class BNS_MeshType
 	TEAPOT = 0,
 	STATUE,
 	BUNNY,
-	ARMADILLO
+	ARMADILLO,
+	SPHERE,
+	CUBE,
+	EARTH,
+	CAPSULE,
 };
 
 class BNS_EnumHandler

@@ -2,6 +2,8 @@
 #include "AScene.h"
 #include "BNS_GameObjectManager.h"
 #include <vector>
+#include <cstdlib>
+#include <ctime>
 #include "IExecutionEvent.h"
 
 class ObjectScene : public AScene, public IExecutionEvent
