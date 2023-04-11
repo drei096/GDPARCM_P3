@@ -85,6 +85,7 @@ enum class BNS_MeshType
 	CUBE,
 	EARTH,
 	CAPSULE,
+	SAMPLE_SCENE,
 };
 
 class BNS_EnumHandler

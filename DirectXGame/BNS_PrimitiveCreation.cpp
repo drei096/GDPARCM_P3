@@ -517,6 +517,7 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateEarth(float posx, float posy, floa
 	cube->SetVertexShader(BNS_VertexShaderType::LIGHTING);
 	cube->SetPixelShader(BNS_PixelShaderType::EARTH);
 	cube->SetPosition(Vector3D{ posx, posy, posz });
+	cube->SetScale(2.0f, 2.0f, 2.0f);
 
 	// adding transform component
 	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", NULL);
@@ -532,9 +533,24 @@ void BNS_PrimitiveCreation::CreateSkyBox(float posx, float posy, float posz)
 	//emptyy
 }
 
-void BNS_PrimitiveCreation::CreateScene(float posx, float posy, float posz)
+BNS_AGameObject* BNS_PrimitiveCreation::CreateScene(float posx, float posy, float posz)
 {
-	//emptyy
+	std::string name = "scene";
+	CheckGameObjectName(name);
+	BNS_Cube* cube = new BNS_Cube(name, BNS_ObjectTypes::CUBE);
+	cube->SetMesh(L"Assets\\Meshes\\scene.obj");
+	cube->SetTexture(L"Assets\\Textures\\wall.jpg");
+	cube->SetVertexShader(BNS_VertexShaderType::POINT_LIGHT);
+	cube->SetPixelShader(BNS_PixelShaderType::POINT_LIGHT);
+	cube->SetPosition(Vector3D{ posx, posy, posz });
+
+	// adding transform component
+	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
+	cube->AttachComponent(transformComp);
+
+	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
+
+	return cube;
 }
 
 void BNS_PrimitiveCreation::CreateMeshFromFile(std::string full_filepath, std::string localName)

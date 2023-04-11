@@ -57,6 +57,16 @@ void ObjectLoader::onStartTask()
 		tempRef = BNS_PrimitiveCreation::Instance()->CreateCapsule(pos.m_x, pos.m_y, pos.m_z);
 		sceneRef->addObject(tempRef);
 	}
+	else if (this->meshType == BNS_MeshType::EARTH)
+	{
+		tempRef = BNS_PrimitiveCreation::Instance()->CreateEarth(pos.m_x, pos.m_y, pos.m_z);
+		sceneRef->addObject(tempRef);
+	}
+	else if (this->meshType == BNS_MeshType::SAMPLE_SCENE)
+	{
+		tempRef = BNS_PrimitiveCreation::Instance()->CreateScene(pos.m_x, pos.m_y, pos.m_z);
+		sceneRef->addObject(tempRef);
+	}
 
 	if (tempRef != NULL)
 		tempRef->SetActive(false);

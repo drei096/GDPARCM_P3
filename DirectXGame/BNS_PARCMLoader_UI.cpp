@@ -84,6 +84,22 @@ void BNS_PARCMLoader_UI::DrawUI()
 		if (progress == 1)
 			dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[2])->hasLoaded = true;
 	}
+	if (dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[3])->maxObjects != 0 && SceneManager::Instance()->getSceneList()[3] != NULL)
+	{
+		ImGui::Text("Scene 4 Loading");
+		float progress = (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[3])->countLoaded / (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[3])->maxObjects;
+		ImGui::ProgressBar(progress, ImVec2(200.0f, 0.0f));
+		if (progress == 1)
+			dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[3])->hasLoaded = true;
+	}
+	if (dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[4])->maxObjects != 0 && SceneManager::Instance()->getSceneList()[4] != NULL)
+	{
+		ImGui::Text("Scene 5 Loading");
+		float progress = (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[4])->countLoaded / (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[4])->maxObjects;
+		ImGui::ProgressBar(progress, ImVec2(200.0f, 0.0f));
+		if (progress == 1)
+			dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[4])->hasLoaded = true;
+	}
 
 	ImGui::NextColumn();
 	//scene info here

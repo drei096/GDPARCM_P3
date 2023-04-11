@@ -2,6 +2,8 @@
 #include "Scene1.h"
 #include "Scene2.h"
 #include "Scene3.h"
+#include "Scene4.h"
+#include "Scene5.h"
 #include "ThreadPool.h"
 #include "IETSemaphore.h"
 
@@ -34,6 +36,10 @@ void SceneManager::initializeScenes()
 	sceneTemp = new Scene2("Scene2", this->sceneList.size());
 	this->addScene(sceneTemp);
 	sceneTemp = new Scene3("Scene3", this->sceneList.size());
+	this->addScene(sceneTemp);
+	sceneTemp = new Scene4("Scene4", this->sceneList.size());
+	this->addScene(sceneTemp);
+	sceneTemp = new Scene5("Scene5", this->sceneList.size());
 	this->addScene(sceneTemp);
 }
 
