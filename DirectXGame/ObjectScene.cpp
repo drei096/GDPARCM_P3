@@ -74,7 +74,8 @@ void ObjectScene::onFinishedExecution()
 
 	if (this->countLoaded == this->maxObjects && this->maxObjects != 0)
 		for (auto objects : this->objectList)
-			objects->SetActive(true);
+			objects->SetActive(false);
+	
 }
 
 void ObjectScene::addObject(BNS_AGameObject* object)

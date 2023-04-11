@@ -20,7 +20,7 @@ void Scene1::loadObjects()
 	if (hasLoaded)
 		return;
 
-	SceneManager::Instance()->sceneLoadSem->acquire(1);
+	//SceneManager::Instance()->sceneLoadSem->acquire(1);
 
 	this->maxObjects = 6;
 
@@ -81,5 +81,5 @@ void Scene1::loadObjects()
 	//this->posList.shrink_to_fit();
 	
 
-	SceneManager::Instance()->sceneLoadSem->release(1);
+	//SceneManager::Instance()->sceneLoadSem->release(1);
 }

@@ -15,7 +15,7 @@ SceneManager::SceneManager()
 	this->threadPool->startScheduler();
 
 	this->sceneLoadSem = new IETSemaphore(1);
-	this->objLoadSem = new IETSemaphore(1);
+	this->objLoadSem = new IETSemaphore(10);
 }
 
 SceneManager::~SceneManager()
@@ -41,6 +41,9 @@ void SceneManager::initializeScenes()
 	this->addScene(sceneTemp);
 	sceneTemp = new Scene5("Scene5", this->sceneList.size());
 	this->addScene(sceneTemp);
+
+	//pre-load all scenes
+	loadAllScenes();
 }
 
 std::vector<AScene*> &SceneManager::getSceneList()

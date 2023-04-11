@@ -24,7 +24,7 @@ void ObjectLoader::onStartTask()
 
 	IETThread::sleep(1000);
 
-	BNS_AGameObject* tempRef = NULL;
+	BNS_AGameObject* tempRef = nullptr;
 
 	//LOAD OBJECTS HERE
 	if (this->meshType == BNS_MeshType::TEAPOT) 
@@ -68,7 +68,7 @@ void ObjectLoader::onStartTask()
 		sceneRef->addObject(tempRef);
 	}
 
-	if (tempRef != NULL)
+	if (tempRef != nullptr)
 		tempRef->SetActive(false);
 
 	this->execEvent->onFinishedExecution();
