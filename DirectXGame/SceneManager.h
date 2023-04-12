@@ -27,6 +27,9 @@ public:
 	void toggleSceneByIndex(int index);
 	void toggleAllScenes();
 
+	std::string getCurrentScene();
+	void setCurrentScene();
+
 public:
 	static void create();
 	static void release();
@@ -39,6 +42,8 @@ public:
 
 private:
 	std::vector<AScene*> sceneList;
+	std::string currentScene = "None";
+	bool isViewingAllScenes = false;
 
 	ThreadPool* threadPool;
 

@@ -17,7 +17,7 @@ void BNS_PARCMLoader_UI::DrawUI()
 	ImGui::Begin("PARCM Scene Loader");
 	ImGui::Columns(3);
 
-	for (int i = 0; i < 5; i++) 
+	for (int i = 0; i < 5; i++)
 	{
 		std::string stringName = "Scene" + std::to_string(i + 1);
 		ImGui::Text(stringName.c_str());
@@ -79,7 +79,7 @@ void BNS_PARCMLoader_UI::DrawUI()
 		ImGui::Text("Scene 3 Loading");
 		float progress = (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[2])->countLoaded / (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[2])->maxObjects;
 		ImGui::ProgressBar(progress, ImVec2(200.0f, 0.0f));
-		if (progress == 1){
+		if (progress == 1) {
 			dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[2])->hasLoaded = true;
 		}
 	}
@@ -88,7 +88,7 @@ void BNS_PARCMLoader_UI::DrawUI()
 		ImGui::Text("Scene 4 Loading");
 		float progress = (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[3])->countLoaded / (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[3])->maxObjects;
 		ImGui::ProgressBar(progress, ImVec2(200.0f, 0.0f));
-		if (progress == 1){
+		if (progress == 1) {
 			dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[3])->hasLoaded = true;
 		}
 	}
@@ -97,15 +97,16 @@ void BNS_PARCMLoader_UI::DrawUI()
 		ImGui::Text("Scene 5 Loading");
 		float progress = (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[4])->countLoaded / (float)dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[4])->maxObjects;
 		ImGui::ProgressBar(progress, ImVec2(200.0f, 0.0f));
-		if (progress == 1){
+		if (progress == 1) {
 			dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[4])->hasLoaded = true;
 		}
 	}
 
 	ImGui::NextColumn();
 	//scene info here
-	ImGui::Text("Current Loaded Scene: testname\n");
-	ImGui::Text("Number of objects: testnum\n");
+	std::string sceneInfo = "Currently Viewing Scene: " + SceneManager::Instance()->getCurrentScene();
+	ImGui::Text(sceneInfo.c_str());
+	
 
 
 	ImGui::End();

@@ -68,10 +68,10 @@ void ObjectScene::unloadObjects()
 	SceneManager::Instance()->sceneLoadSem->release();
 }
 
-void ObjectScene::toggleObjects()
+void ObjectScene::toggleObjects(bool isActive)
 {
 	for (auto object : this->objectList)
-		object->SetActive(!object->GetActive());
+		object->SetActive(isActive);
 }
 
 void ObjectScene::onFinishedExecution()
@@ -81,7 +81,7 @@ void ObjectScene::onFinishedExecution()
 
 	if (this->countLoaded == this->maxObjects && this->maxObjects != 0)
 		for (auto objects : this->objectList)
-			objects->SetActive(true);
+			objects->SetActive(isViewingScene); //initially set to false for startup load
 	
 }
 

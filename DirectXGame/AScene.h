@@ -12,7 +12,10 @@ public:
 
 	virtual void loadObjects() = 0;
 	virtual void unloadObjects() = 0;
-	virtual void toggleObjects() = 0;
+	virtual void toggleObjects(bool isActive) = 0;
+
+public:
+	bool isViewingScene = false;
 
 private:
 	std::string name;

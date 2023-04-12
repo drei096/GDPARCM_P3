@@ -44,7 +44,7 @@ void SceneManager::initializeScenes()
 	this->addScene(sceneTemp);
 
 	//pre-load all scenes
-	//loadAllScenes();
+	loadAllScenes();
 }
 
 std::vector<AScene*> &SceneManager::getSceneList()
@@ -99,7 +99,22 @@ void SceneManager::toggleSceneByIndex(int index)
 	if (this->sceneList[index] == NULL)
 		return;
 
-	this->sceneList[index]->toggleObjects();
+	isViewingAllScenes = false;
+	for(int i = 0; i < sceneList.size(); i++)
+	{
+		if (i != index)
+		{
+			this->sceneList[i]->isViewingScene = false;
+			this->sceneList[i]->toggleObjects(this->sceneList[i]->isViewingScene);
+		}
+		else
+		{
+			this->sceneList[i]->isViewingScene = true;
+			this->sceneList[i]->toggleObjects(this->sceneList[i]->isViewingScene);
+		}
+	}
+
+	currentScene = "Scene" + std::to_string((index + 1));
 }
 
 void SceneManager::toggleAllScenes()
@@ -107,8 +122,38 @@ void SceneManager::toggleAllScenes()
 	if (this->sceneList.empty())
 		return;
 
-	for (auto scene : this->sceneList)
-		scene->toggleObjects();
+	if(isViewingAllScenes == false)
+	{
+		for (auto scene : this->sceneList)
+		{
+			scene->isViewingScene = true;
+			scene->toggleObjects(scene->isViewingScene);
+		}
+		isViewingAllScenes = true;
+		currentScene = "All Scenes";
+	}
+	else
+	{
+		for (auto scene : this->sceneList)
+		{
+			scene->isViewingScene = false;
+			scene->toggleObjects(scene->isViewingScene);
+		}
+		isViewingAllScenes = false;
+		currentScene = "None";
+	}
+	
+		
+}
+
+std::string SceneManager::getCurrentScene()
+{
+	return currentScene;
+}
+
+void SceneManager::setCurrentScene()
+{
+	
 }
 
 void SceneManager::create()

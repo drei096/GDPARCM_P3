@@ -16,7 +16,7 @@ public:
 	// Inherited via AScene
 	virtual void loadObjects() = 0;
 	virtual void unloadObjects() override;
-	virtual void toggleObjects() override;
+	virtual void toggleObjects(bool isActive) override;
 
 	// Inherited via IExecutionEvent
 	virtual void onFinishedExecution() override;
