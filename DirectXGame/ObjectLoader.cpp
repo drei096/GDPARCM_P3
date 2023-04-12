@@ -20,7 +20,7 @@ void ObjectLoader::onStartTask()
 {
 	std::cout << "Running Object Loader" << std::endl;
 
-	SceneManager::Instance()->objLoadSem->acquire(1);
+	SceneManager::Instance()->objLoadSem->acquire();
 
 	IETThread::sleep(1000);
 
@@ -61,11 +61,11 @@ void ObjectLoader::onStartTask()
 	}
 
 	if (tempRef != nullptr) {
-		SceneManager::Instance()->objmutex->acquire();
 		sceneRef->addObject(tempRef);
-		SceneManager::Instance()->objmutex->release();
 		tempRef->SetActive(false);
 	}
+
+	SceneManager::Instance()->objLoadSem->release();
 
 	this->execEvent->onFinishedExecution();
 	//delete after being done

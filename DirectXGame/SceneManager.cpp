@@ -11,11 +11,11 @@ SceneManager* SceneManager::sharedInstance = nullptr;
 
 SceneManager::SceneManager()
 {
-	this->threadPool = new ThreadPool("MeshLoaderPool", 6);
+	this->threadPool = new ThreadPool("MeshLoaderPool", 12);
 	this->threadPool->startScheduler();
 
 	this->sceneLoadSem = new IETSemaphore(1);
-	this->objLoadSem = new IETSemaphore(10);
+	this->objLoadSem = new IETSemaphore(1);
 	this->objmutex = new IETSemaphore(1);
 }
 
@@ -44,7 +44,7 @@ void SceneManager::initializeScenes()
 	this->addScene(sceneTemp);
 
 	//pre-load all scenes
-	loadAllScenes();
+	//loadAllScenes();
 }
 
 std::vector<AScene*> &SceneManager::getSceneList()
@@ -70,8 +70,11 @@ void SceneManager::loadAllScenes()
 	if (this->sceneList.empty())
 		return;
 
-	for (auto scene : this->sceneList)
-		scene->loadObjects();
+	for (auto scene : this->sceneList) 
+	{
+		if (!dynamic_cast<ObjectScene*>(scene)->hasLoaded)
+			scene->loadObjects();
+	}
 }
 
 void SceneManager::unloadSceneByIndex(int index)

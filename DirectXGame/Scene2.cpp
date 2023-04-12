@@ -80,5 +80,4 @@ void Scene2::loadObjects()
 	//this->posList.erase(this->posList.begin() + randomNumber);
 	//this->posList.shrink_to_fit();
 
-	//SceneManager::Instance()->sceneLoadSem->release(1);
 }

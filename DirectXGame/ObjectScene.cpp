@@ -42,7 +42,7 @@ void ObjectScene::unloadObjects()
 	if (!hasLoaded)
 		return;
 
-	SceneManager::Instance()->sceneLoadSem->acquire(1);
+	SceneManager::Instance()->sceneLoadSem->acquire();
 
 	this->countLoaded = 0;
 
@@ -53,6 +53,11 @@ void ObjectScene::unloadObjects()
 		SceneManager::Instance()->objmutex->release();
 	}
 
+	this->objectList.clear();
+	this->objectList.shrink_to_fit();
+
+	std::cout << this->objectList.size() << std::endl;
+
 	for (auto occupiedPos : this->occupiedList)
 		this->posList.push_back(occupiedPos);
 
@@ -60,7 +65,7 @@ void ObjectScene::unloadObjects()
 
 	this->hasLoaded = false;
 
-	SceneManager::Instance()->sceneLoadSem->release(1);
+	SceneManager::Instance()->sceneLoadSem->release();
 }
 
 void ObjectScene::toggleObjects()
@@ -71,12 +76,12 @@ void ObjectScene::toggleObjects()
 
 void ObjectScene::onFinishedExecution()
 {
-	SceneManager::Instance()->objLoadSem->release(1);
+	//SceneManager::Instance()->objLoadSem->release();
 	this->countLoaded++;
 
 	if (this->countLoaded == this->maxObjects && this->maxObjects != 0)
 		for (auto objects : this->objectList)
-			objects->SetActive(false);
+			objects->SetActive(true);
 	
 }
 
