@@ -5,32 +5,7 @@
 
 ObjectScene::ObjectScene(std::string name, int index) : AScene(name, index)
 {
-	//1
-	this->posList.push_back(Vector3D(0, 0, 0));
-	//2
-	this->posList.push_back(Vector3D(2.5, 2.5, 2.5));
-	//3
-	this->posList.push_back(Vector3D(-2.5, -2.5, -2.5));
-	//4
-	this->posList.push_back(Vector3D(5, 5, 5));
-	//5
-	this->posList.push_back(Vector3D(-5, -5, -5));
-	//6
-	this->posList.push_back(Vector3D(7.5, 7.5, 7.5));
-	//7
-	this->posList.push_back(Vector3D(-7.5, -7.5, -7.5));
-	//8
-	this->posList.push_back(Vector3D(10, 10, 10));
-	//9
-	this->posList.push_back(Vector3D(-10, -10, -10));
-	//10
-	this->posList.push_back(Vector3D(12.5, 12.5, 12.5));
-	//11
-	this->posList.push_back(Vector3D(-12.5, -12.5, -12.5));
-	//12
-	this->posList.push_back(Vector3D(15, 15, 15));
-	//13
-	this->posList.push_back(Vector3D(-15, -15, -15));
+	
 }
 
 ObjectScene::~ObjectScene()
@@ -58,10 +33,10 @@ void ObjectScene::unloadObjects()
 
 	std::cout << this->objectList.size() << std::endl;
 
-	for (auto occupiedPos : this->occupiedList)
-		this->posList.push_back(occupiedPos);
+	for (auto occupiedPos : SceneManager::Instance()->occupiedList)
+		SceneManager::Instance()->posList.push_back(occupiedPos);
 
-	this->occupiedList.clear();
+	SceneManager::Instance()->occupiedList.clear();
 
 	this->hasLoaded = false;
 

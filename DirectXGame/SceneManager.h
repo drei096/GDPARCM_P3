@@ -40,6 +40,10 @@ public:
 	IETSemaphore* objLoadSem;
 	IETSemaphore* objmutex;
 
+	std::vector<Vector3D> posList;
+	std::vector<Vector3D> occupiedList;
+	std::vector<BNS_AGameObject*> objectList;
+
 private:
 	std::vector<AScene*> sceneList;
 	std::string currentScene = "None";

@@ -86,6 +86,10 @@ enum class BNS_MeshType
 	EARTH,
 	CAPSULE,
 	SAMPLE_SCENE,
+	FARMHOUSE,
+	SPACESHIP,
+	SUZANNE,
+	TORUS,
 };
 
 class BNS_EnumHandler

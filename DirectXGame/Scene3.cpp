@@ -25,58 +25,58 @@ void Scene3::loadObjects()
 	this->maxObjects = 6;
 
 	int randomNumber = 0;
-	Vector3D randomPos = Vector3D(Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f));
+	//Vector3D randomPos = Vector3D(Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f));
 
-	randomNumber = rand() % this->posList.size();
+	randomNumber = rand() % SceneManager::Instance()->posList.size();
 	//ObjectLoader* objectLoader = new ObjectLoader(this, BNS_MeshType::TEAPOT, this->posList[randomNumber], this);
-	ObjectLoader* objectLoader = new ObjectLoader(this, BNS_MeshType::EARTH, randomPos, this);
+	ObjectLoader* objectLoader = new ObjectLoader(this, BNS_MeshType::SUZANNE, SceneManager::Instance()->posList[randomNumber], this);
 	SceneManager::Instance()->getThreadPool()->scheduleTask(objectLoader);
-	//this->occupiedList.push_back(this->posList[randomNumber]);
-	//this->posList.erase(this->posList.begin() + randomNumber);
-	//this->posList.shrink_to_fit();
+	SceneManager::Instance()->occupiedList.push_back(SceneManager::Instance()->posList[randomNumber]);
+	SceneManager::Instance()->posList.erase(SceneManager::Instance()->posList.begin() + randomNumber);
+	SceneManager::Instance()->posList.shrink_to_fit();
 
-	randomPos = Vector3D(Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f));
-	randomNumber = rand() % this->posList.size();
+	//randomPos = Vector3D(Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f));
+	randomNumber = rand() % SceneManager::Instance()->posList.size();
 	//objectLoader = new ObjectLoader(this, BNS_MeshType::BUNNY, this->posList[randomNumber], this);
-	objectLoader = new ObjectLoader(this, BNS_MeshType::EARTH, randomPos, this);
+	objectLoader = new ObjectLoader(this, BNS_MeshType::EARTH, SceneManager::Instance()->posList[randomNumber], this);
 	SceneManager::Instance()->getThreadPool()->scheduleTask(objectLoader);
-	//this->occupiedList.push_back(this->posList[randomNumber]);
-	//this->posList.erase(this->posList.begin() + randomNumber);
-	//this->posList.shrink_to_fit();
+	SceneManager::Instance()->occupiedList.push_back(SceneManager::Instance()->posList[randomNumber]);
+	SceneManager::Instance()->posList.erase(SceneManager::Instance()->posList.begin() + randomNumber);
+	SceneManager::Instance()->posList.shrink_to_fit();
 
-	randomPos = Vector3D(Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f));
-	randomNumber = rand() % this->posList.size();
+	//randomPos = Vector3D(Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f));
+	randomNumber = rand() % SceneManager::Instance()->posList.size();
 	//objectLoader = new ObjectLoader(this, BNS_MeshType::ARMADILLO, this->posList[randomNumber], this);
-	objectLoader = new ObjectLoader(this, BNS_MeshType::BUNNY, randomPos, this);
+	objectLoader = new ObjectLoader(this, BNS_MeshType::BUNNY, SceneManager::Instance()->posList[randomNumber], this);
 	SceneManager::Instance()->getThreadPool()->scheduleTask(objectLoader);
-	//this->occupiedList.push_back(this->posList[randomNumber]);
-	//this->posList.erase(this->posList.begin() + randomNumber);
-	//this->posList.shrink_to_fit();
+	SceneManager::Instance()->occupiedList.push_back(SceneManager::Instance()->posList[randomNumber]);
+	SceneManager::Instance()->posList.erase(SceneManager::Instance()->posList.begin() + randomNumber);
+	SceneManager::Instance()->posList.shrink_to_fit();
 
-	randomPos = Vector3D(Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f));
-	randomNumber = rand() % this->posList.size();
+	//randomPos = Vector3D(Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f));
+	randomNumber = rand() % SceneManager::Instance()->posList.size();
 	//objectLoader = new ObjectLoader(this, BNS_MeshType::STATUE, this->posList[randomNumber], this);
-	objectLoader = new ObjectLoader(this, BNS_MeshType::STATUE, randomPos, this);
+	objectLoader = new ObjectLoader(this, BNS_MeshType::STATUE, SceneManager::Instance()->posList[randomNumber], this);
 	SceneManager::Instance()->getThreadPool()->scheduleTask(objectLoader);
-	//this->occupiedList.push_back(this->posList[randomNumber]);
-	//this->posList.erase(this->posList.begin() + randomNumber);
-	//this->posList.shrink_to_fit();
+	SceneManager::Instance()->occupiedList.push_back(SceneManager::Instance()->posList[randomNumber]);
+	SceneManager::Instance()->posList.erase(SceneManager::Instance()->posList.begin() + randomNumber);
+	SceneManager::Instance()->posList.shrink_to_fit();
 
-	randomPos = Vector3D(Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f));
-	randomNumber = rand() % this->posList.size();
+	//randomPos = Vector3D(Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f));
+	randomNumber = rand() % SceneManager::Instance()->posList.size();
 	//objectLoader = new ObjectLoader(this, BNS_MeshType::BUNNY, this->posList[randomNumber], this);
-	objectLoader = new ObjectLoader(this, BNS_MeshType::STATUE, randomPos, this);
+	objectLoader = new ObjectLoader(this, BNS_MeshType::STATUE, SceneManager::Instance()->posList[randomNumber], this);
 	SceneManager::Instance()->getThreadPool()->scheduleTask(objectLoader);
-	//this->occupiedList.push_back(this->posList[randomNumber]);
-	//this->posList.erase(this->posList.begin() + randomNumber);
-	//this->posList.shrink_to_fit();
+	SceneManager::Instance()->occupiedList.push_back(SceneManager::Instance()->posList[randomNumber]);
+	SceneManager::Instance()->posList.erase(SceneManager::Instance()->posList.begin() + randomNumber);
+	SceneManager::Instance()->posList.shrink_to_fit();
 
-	randomPos = Vector3D(Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f));
-	randomNumber = rand() % this->posList.size();
+	//randomPos = Vector3D(Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f), Utils::randomFloat(-25.0f, 25.0f));
+	randomNumber = rand() % SceneManager::Instance()->posList.size();
 	//objectLoader = new ObjectLoader(this, BNS_MeshType::TEAPOT, this->posList[randomNumber], this);
-	objectLoader = new ObjectLoader(this, BNS_MeshType::CAPSULE, randomPos, this);
+	objectLoader = new ObjectLoader(this, BNS_MeshType::CAPSULE, SceneManager::Instance()->posList[randomNumber], this);
 	SceneManager::Instance()->getThreadPool()->scheduleTask(objectLoader);
-	//this->occupiedList.push_back(this->posList[randomNumber]);
-	//this->posList.erase(this->posList.begin() + randomNumber);
-	//this->posList.shrink_to_fit();
+	SceneManager::Instance()->occupiedList.push_back(SceneManager::Instance()->posList[randomNumber]);
+	SceneManager::Instance()->posList.erase(SceneManager::Instance()->posList.begin() + randomNumber);
+	SceneManager::Instance()->posList.shrink_to_fit();
 }

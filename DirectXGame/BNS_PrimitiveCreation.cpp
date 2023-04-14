@@ -390,6 +390,7 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateSphere(float posx, float posy, flo
 	cube->SetVertexShader(BNS_VertexShaderType::COLOR);
 	cube->SetPixelShader(BNS_PixelShaderType::COLOR);
 	cube->SetPosition(Vector3D{ posx, posy, posz });
+	cube->SetScale(5.0f, 5.0f, 5.0f);
 
 	// adding transform component
 	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
@@ -409,7 +410,7 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateCapsule(float posx, float posy, fl
 	cube->SetVertexShader(BNS_VertexShaderType::COLOR);
 	cube->SetPixelShader(BNS_PixelShaderType::COLOR);
 	cube->SetPosition(Vector3D{ posx, posy, posz });
-	cube->SetScale(3.0f, 3.0f, 3.0f);
+	cube->SetScale(5.0f, 5.0f, 5.0f);
 
 	// adding transform component
 	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
@@ -451,7 +452,7 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateStatue(float posx, float posy, flo
 	cube->SetVertexShader(BNS_VertexShaderType::LIGHTING);
 	cube->SetPixelShader(BNS_PixelShaderType::LIGHTING);
 	cube->SetPosition(Vector3D{ posx, posy, posz });
-	cube->SetScale(10.0f, 10.0f, 10.0f);
+	cube->SetScale(20.0f, 20.0f, 20.0f);
 
 	// adding transform component
 	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
@@ -472,7 +473,7 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateBunny(float posx, float posy, floa
 	cube->SetPixelShader(BNS_PixelShaderType::MESH);
 	cube->SetTexture(L"Assets\\Textures\\brick.png");
 	cube->SetPosition(Vector3D{ posx, posy, posz });
-	cube->SetScale(20.0f, 20.0f, 20.0f);
+	cube->SetScale(25.0f, 25.0f, 25.0f);
 
 	// adding transform component
 	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
@@ -517,7 +518,7 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateEarth(float posx, float posy, floa
 	cube->SetVertexShader(BNS_VertexShaderType::LIGHTING);
 	cube->SetPixelShader(BNS_PixelShaderType::EARTH);
 	cube->SetPosition(Vector3D{ posx, posy, posz });
-	cube->SetScale(2.0f, 2.0f, 2.0f);
+	cube->SetScale(5.0f, 5.0f, 5.0f);
 
 	// adding transform component
 	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
@@ -540,9 +541,92 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateScene(float posx, float posy, floa
 	BNS_Cube* cube = new BNS_Cube(name, BNS_ObjectTypes::CUBE);
 	cube->SetMesh(L"Assets\\Meshes\\scene.obj");
 	cube->SetTexture(L"Assets\\Textures\\wall.jpg");
-	cube->SetVertexShader(BNS_VertexShaderType::POINT_LIGHT);
-	cube->SetPixelShader(BNS_PixelShaderType::POINT_LIGHT);
+	cube->SetVertexShader(BNS_VertexShaderType::TEXTURE);
+	cube->SetPixelShader(BNS_PixelShaderType::MESH);
 	cube->SetPosition(Vector3D{ posx, posy, posz });
+
+	// adding transform component
+	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
+	cube->AttachComponent(transformComp);
+
+	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
+
+	return cube;
+}
+
+BNS_AGameObject* BNS_PrimitiveCreation::CreateFarmhouse(float posx, float posy, float posz)
+{
+	std::string name = "farmhouse";
+	CheckGameObjectName(name);
+	BNS_Cube* cube = new BNS_Cube(name, BNS_ObjectTypes::CUBE);
+	cube->SetMesh(L"Assets\\Meshes\\farmhouse_obj.obj");
+	cube->SetTexture(L"Assets\\Textures\\Farmhouse Texture.jpg");
+	cube->SetVertexShader(BNS_VertexShaderType::TEXTURE);
+	cube->SetPixelShader(BNS_PixelShaderType::MESH);
+	cube->SetPosition(Vector3D{ posx, posy, posz });
+
+	// adding transform component
+	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
+	cube->AttachComponent(transformComp);
+
+	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
+
+	return cube;
+}
+
+BNS_AGameObject* BNS_PrimitiveCreation::CreateSpaceship(float posx, float posy, float posz)
+{
+	std::string name = "spaceship";
+	CheckGameObjectName(name);
+	BNS_Cube* cube = new BNS_Cube(name, BNS_ObjectTypes::CUBE);
+	cube->SetMesh(L"Assets\\Meshes\\spaceship.obj");
+	cube->SetTexture(L"Assets\\Textures\\rocket_body_1.jpg");
+	cube->SetVertexShader(BNS_VertexShaderType::TEXTURE);
+	cube->SetPixelShader(BNS_PixelShaderType::MESH);
+	cube->SetPosition(Vector3D{ posx, posy, posz });
+	cube->SetScale(3.0f, 3.0f, 3.0f);
+
+	// adding transform component
+	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
+	cube->AttachComponent(transformComp);
+
+	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
+
+	return cube;
+}
+
+BNS_AGameObject* BNS_PrimitiveCreation::CreateSuzanne(float posx, float posy, float posz)
+{
+	std::string name = "suzanne";
+	CheckGameObjectName(name);
+	BNS_Cube* cube = new BNS_Cube(name, BNS_ObjectTypes::CUBE);
+	cube->SetMesh(L"Assets\\Meshes\\suzanne.obj");
+	cube->SetTexture(L"Assets\\Textures\\brick.png");
+	cube->SetVertexShader(BNS_VertexShaderType::TEXTURE);
+	cube->SetPixelShader(BNS_PixelShaderType::MESH);
+	cube->SetPosition(Vector3D{ posx, posy, posz });
+	cube->SetScale(5.0f, 5.0f, 5.0f);
+
+	// adding transform component
+	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
+	cube->AttachComponent(transformComp);
+
+	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
+
+	return cube;
+}
+
+BNS_AGameObject* BNS_PrimitiveCreation::CreateTorus(float posx, float posy, float posz)
+{
+	std::string name = "torus";
+	CheckGameObjectName(name);
+	BNS_Cube* cube = new BNS_Cube(name, BNS_ObjectTypes::CUBE);
+	cube->SetMesh(L"Assets\\Meshes\\torus.obj");
+	cube->SetTexture(L"Assets\\Textures\\brick.png");
+	cube->SetVertexShader(BNS_VertexShaderType::TEXTURE);
+	cube->SetPixelShader(BNS_PixelShaderType::MESH);
+	cube->SetPosition(Vector3D{ posx, posy, posz });
+	cube->SetScale(5.0f, 5.0f, 5.0f);
 
 	// adding transform component
 	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);

@@ -53,6 +53,10 @@ public:
 	BNS_AGameObject* CreateEarth(float posx, float posy, float posz);
 	void CreateSkyBox(float posx, float posy, float posz);
 	BNS_AGameObject* CreateScene(float posx, float posy, float posz);
+	BNS_AGameObject* CreateFarmhouse(float posx, float posy, float posz);
+	BNS_AGameObject* CreateSpaceship(float posx, float posy, float posz);
+	BNS_AGameObject* CreateSuzanne(float posx, float posy, float posz);
+	BNS_AGameObject* CreateTorus(float posx, float posy, float posz);
 
 	void CreateMeshFromFile(std::string full_filepath, std::string localName);
 

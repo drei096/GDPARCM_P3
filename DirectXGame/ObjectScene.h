@@ -30,8 +30,8 @@ public:
 	bool hasLoaded = false;
 
 protected:
-	std::vector<Vector3D> posList;
-	std::vector<Vector3D> occupiedList;
+	//std::vector<Vector3D> posList;
+	//std::vector<Vector3D> occupiedList;
 	std::vector<BNS_AGameObject*> objectList;
 };
 

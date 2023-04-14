@@ -59,6 +59,22 @@ void ObjectLoader::onStartTask()
 	{
 		tempRef = BNS_PrimitiveCreation::Instance()->CreateScene(pos.m_x, pos.m_y, pos.m_z);
 	}
+	else if (this->meshType == BNS_MeshType::FARMHOUSE)
+	{
+		tempRef = BNS_PrimitiveCreation::Instance()->CreateFarmhouse(pos.m_x, pos.m_y, pos.m_z);
+	}
+	else if (this->meshType == BNS_MeshType::SPACESHIP)
+	{
+		tempRef = BNS_PrimitiveCreation::Instance()->CreateSpaceship(pos.m_x, pos.m_y, pos.m_z);
+	}
+	else if (this->meshType == BNS_MeshType::SUZANNE)
+	{
+		tempRef = BNS_PrimitiveCreation::Instance()->CreateSuzanne(pos.m_x, pos.m_y, pos.m_z);
+	}
+	else if (this->meshType == BNS_MeshType::TORUS)
+	{
+		tempRef = BNS_PrimitiveCreation::Instance()->CreateTorus(pos.m_x, pos.m_y, pos.m_z);
+	}
 
 	if (tempRef != nullptr) {
 		sceneRef->addObject(tempRef);

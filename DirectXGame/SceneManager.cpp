@@ -18,6 +18,46 @@ SceneManager::SceneManager()
 	this->sceneLoadSem = new IETSemaphore(1);
 	this->objLoadSem = new IETSemaphore(1);
 	this->objmutex = new IETSemaphore(1);
+
+	this->posList.push_back(Vector3D(0, 0, 0));
+	this->posList.push_back(Vector3D(2.5, 2.5, 2.5));
+	this->posList.push_back(Vector3D(-2.5, -2.5, -2.5));
+	this->posList.push_back(Vector3D(5, 5, 5));
+	this->posList.push_back(Vector3D(-5, -5, -5));
+	this->posList.push_back(Vector3D(7.5, 7.5, 7.5));
+	this->posList.push_back(Vector3D(-7.5, -7.5, -7.5));
+	this->posList.push_back(Vector3D(10, 10, 10));
+	this->posList.push_back(Vector3D(-10, -10, -10));
+	this->posList.push_back(Vector3D(12.5, 12.5, 12.5));
+	this->posList.push_back(Vector3D(-12.5, -12.5, -12.5));
+	this->posList.push_back(Vector3D(15, 15, 15));
+	this->posList.push_back(Vector3D(-15, -15, -15));
+	this->posList.push_back(Vector3D(10, 0, 10));
+	this->posList.push_back(Vector3D(-10, 0, 10));
+	this->posList.push_back(Vector3D(-10, 0, -10));
+	this->posList.push_back(Vector3D(10, 0, -10));
+	this->posList.push_back(Vector3D(0, -20, 0));
+	this->posList.push_back(Vector3D(20, 20, 0));
+	this->posList.push_back(Vector3D(0, 20, 20));
+	this->posList.push_back(Vector3D(-20, 10, 10));
+	this->posList.push_back(Vector3D(30, -10, 10));
+	this->posList.push_back(Vector3D(15.5, -15.5, 12.5));
+	this->posList.push_back(Vector3D(-15, 20, -2));
+	this->posList.push_back(Vector3D(7, -8, 28));
+	this->posList.push_back(Vector3D(-27, -12, -18));
+	this->posList.push_back(Vector3D(22, -26, 10));
+	this->posList.push_back(Vector3D(4, 17, 14));
+	this->posList.push_back(Vector3D(-28, 9, -29));
+	this->posList.push_back(Vector3D(13, 27, -6));
+	this->posList.push_back(Vector3D(26, -28, 23));
+	this->posList.push_back(Vector3D(-10, -20, -27));
+	this->posList.push_back(Vector3D(-6, 13, 22));
+	this->posList.push_back(Vector3D(11, 25, 18));
+	this->posList.push_back(Vector3D(-21, -7, -8));
+	this->posList.push_back(Vector3D(19, -17, -19));
+	this->posList.push_back(Vector3D(-24, 4, 26));
+	this->posList.push_back(Vector3D(3, 30, 9));
+	this->posList.push_back(Vector3D(28, -23, -12));
 }
 
 SceneManager::~SceneManager()
