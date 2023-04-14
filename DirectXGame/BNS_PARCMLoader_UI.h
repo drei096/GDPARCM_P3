@@ -9,6 +9,9 @@ public:
 	~BNS_PARCMLoader_UI();
 	void DrawUI() override;
 
+	void DrawLoadingBars();
+	void DrawPopUpUI();
+
 private:
 	float progress1 = 0.0f;
 	float progress2 = 0.0f;

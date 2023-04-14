@@ -45,9 +45,6 @@ void BNS_AppWindow::onCreate()
 
 	BNS_EngineBackend::getInstance()->setMode(BNS_EngineBackend::EDITOR);
 	BNS_ActionHistory::Initialize();
-	SceneManager::Instance()->initializeScenes();
-
-	
 
 	// create swap chain
 	RECT rc = this->getClientWindowRect();
@@ -66,6 +63,7 @@ void BNS_AppWindow::onCreate()
 		CreateRenderToTexture(rc.right - rc.left, rc.bottom - rc.top);
 	// create the UI manager
 	BNS_UIManager::Initialize(this, m_hwnd, m_scene_views);
+	SceneManager::Instance()->initializeScenes();
 	// Create base skybox
 	//BNS_PrimitiveCreation::Instance()->CreateSkyBox();
 

@@ -6,6 +6,7 @@
 #include "Scene5.h"
 #include "ThreadPool.h"
 #include "IETSemaphore.h"
+#include "IMGUI/imgui.h"
 
 SceneManager* SceneManager::sharedInstance = nullptr;
 

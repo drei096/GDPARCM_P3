@@ -412,7 +412,7 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateCapsule(float posx, float posy, fl
 	cube->SetScale(3.0f, 3.0f, 3.0f);
 
 	// adding transform component
-	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", NULL);
+	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
 	cube->AttachComponent(transformComp);
 
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
@@ -433,7 +433,7 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateTeapot(float posx, float posy, flo
 	cube->SetScale(5.0f, 5.0f, 5.0f);
 
 	// adding transform component
-	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", NULL);
+	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
 	cube->AttachComponent(transformComp);
 
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
@@ -454,7 +454,7 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateStatue(float posx, float posy, flo
 	cube->SetScale(10.0f, 10.0f, 10.0f);
 
 	// adding transform component
-	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", NULL);
+	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
 	cube->AttachComponent(transformComp);
 
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
@@ -475,7 +475,7 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateBunny(float posx, float posy, floa
 	cube->SetScale(20.0f, 20.0f, 20.0f);
 
 	// adding transform component
-	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", NULL);
+	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
 	cube->AttachComponent(transformComp);
 
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
@@ -496,7 +496,7 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateArmadillo(float posx, float posy, 
 	cube->SetScale(5.0f, 5.0f, 5.0f);
 
 	// adding transform component
-	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", NULL);
+	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
 	cube->AttachComponent(transformComp);
 
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
@@ -520,7 +520,7 @@ BNS_AGameObject* BNS_PrimitiveCreation::CreateEarth(float posx, float posy, floa
 	cube->SetScale(2.0f, 2.0f, 2.0f);
 
 	// adding transform component
-	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", NULL);
+	BNS_TransformComponent* transformComp = new BNS_TransformComponent("PhysTransform", cube);
 	cube->AttachComponent(transformComp);
 
 	BNS_GameObjectManager::get()->GetObjectList().emplace_back(cube);
