@@ -102,7 +102,7 @@ void BNS_AppWindow::render()
 			}
 		}
 		// Update SkyBox
-		BNS_GameObjectManager::get()->GetSkyBox()->Update(BNS_EngineTime::getDeltaTime());
+		//BNS_GameObjectManager::get()->GetSkyBox()->Update(BNS_EngineTime::getDeltaTime());
 		// update renderstate (back)
 		BNS_GraphicsEngine::get()->getRenderSystem()->SetRasterizerState(false);
 		// BNS_PassRender; Draw objects in order
@@ -115,7 +115,7 @@ void BNS_AppWindow::render()
 		// update renderstate (front)
 		BNS_GraphicsEngine::get()->getRenderSystem()->SetRasterizerState(true);
 		// Draw SkyBox
-		BNS_GameObjectManager::get()->GetSkyBox()->Draw(m_blender);
+		//BNS_GameObjectManager::get()->GetSkyBox()->Draw(m_blender);
 	}
 	{
 		// CLEAR THE RENDER TARGET FOR RENDER_TO_TEXTURE
@@ -148,7 +148,7 @@ void BNS_AppWindow::render()
 			}
 		}
 		// Update SkyBox
-		BNS_GameObjectManager::get()->GetSkyBox()->Update(BNS_EngineTime::getDeltaTime());
+		//BNS_GameObjectManager::get()->GetSkyBox()->Update(BNS_EngineTime::getDeltaTime());
 		// update renderstate (back)
 		BNS_GraphicsEngine::get()->getRenderSystem()->SetRasterizerState(false);
 		// BNS_PassRender; Draw objects in order
@@ -161,7 +161,7 @@ void BNS_AppWindow::render()
 		// update renderstate (front)
 		BNS_GraphicsEngine::get()->getRenderSystem()->SetRasterizerState(true);
 		// Draw SkyBox
-		BNS_GameObjectManager::get()->GetSkyBox()->Draw(m_blender);
+		//BNS_GameObjectManager::get()->GetSkyBox()->Draw(m_blender);
 	}
 	{
 		// CLEAR THE RENDER TARGET FOR RENDER_TO_TEXTURE
@@ -194,7 +194,7 @@ void BNS_AppWindow::render()
 			}
 		}
 		// Update SkyBox
-		BNS_GameObjectManager::get()->GetSkyBox()->Update(BNS_EngineTime::getDeltaTime());
+		//BNS_GameObjectManager::get()->GetSkyBox()->Update(BNS_EngineTime::getDeltaTime());
 		// update renderstate (back)
 		BNS_GraphicsEngine::get()->getRenderSystem()->SetRasterizerState(false);
 		// BNS_PassRender; Draw objects in order
@@ -207,7 +207,7 @@ void BNS_AppWindow::render()
 		// update renderstate (front)
 		BNS_GraphicsEngine::get()->getRenderSystem()->SetRasterizerState(true);
 		// Draw SkyBox
-		BNS_GameObjectManager::get()->GetSkyBox()->Draw(m_blender);
+		//BNS_GameObjectManager::get()->GetSkyBox()->Draw(m_blender);
 	}
 	{
 		// CLEAR THE RENDER TARGET FOR RENDER_TO_TEXTURE
@@ -240,7 +240,7 @@ void BNS_AppWindow::render()
 			}
 		}
 		// Update SkyBox
-		BNS_GameObjectManager::get()->GetSkyBox()->Update(BNS_EngineTime::getDeltaTime());
+		//BNS_GameObjectManager::get()->GetSkyBox()->Update(BNS_EngineTime::getDeltaTime());
 		// update renderstate (back)
 		BNS_GraphicsEngine::get()->getRenderSystem()->SetRasterizerState(false);
 		// BNS_PassRender; Draw objects in order
@@ -253,7 +253,7 @@ void BNS_AppWindow::render()
 		// update renderstate (front)
 		BNS_GraphicsEngine::get()->getRenderSystem()->SetRasterizerState(true);
 		// Draw SkyBox
-		BNS_GameObjectManager::get()->GetSkyBox()->Draw(m_blender);
+		//BNS_GameObjectManager::get()->GetSkyBox()->Draw(m_blender);
 	}
 	//CLEAR THE RENDER TARGET 
 	BNS_GraphicsEngine::get()->getRenderSystem()->GetImmediateDeviceContext()->clearRenderTargetColor

@@ -1,4 +1,7 @@
 #include "BNS_PARCMLoader_UI.h"
+
+#include "BNS_FileExplorer.h"
+#include "BNS_Texture.h"
 #include "SceneManager.h"
 #include "ObjectScene.h"
 #include "IETSemaphore.h"
@@ -26,7 +29,7 @@ void BNS_PARCMLoader_UI::DrawUI()
 		if (ImGui::Button(("Load##" + std::to_string(i)).c_str(), ImVec2(100, 0)))
 		{
 			SceneManager::Instance()->loadSceneByIndex(i);
-			this->queuedForSceneLoadingCount++; 
+			this->queuedForSceneLoadingCount++;
 		}
 		ImGui::SameLine();
 		if (ImGui::Button(("Unload##" + std::to_string(i)).c_str(), ImVec2(100, 0)))
@@ -40,11 +43,20 @@ void BNS_PARCMLoader_UI::DrawUI()
 		{
 			SceneManager::Instance()->toggleSceneByIndex(i);
 			if (!dynamic_cast<ObjectScene*>(SceneManager::Instance()->getSceneList()[i])->hasLoaded) {
-				ImGui::CloseCurrentPopup(); 
+				ImGui::CloseCurrentPopup();
 				ImGui::OpenPopup(("Loading##" + std::to_string(i)).c_str());
 			}
 
 		}
+
+		ImGui::SameLine();
+		TexturePtr icon = BNS_FileExplorer::GetInstance()->GetImageHashTable()["s" + std::to_string(i + 1)];
+		static float thumbnailSize = 128.0f;
+		ImGui::ImageButton((void*)icon.get()->GetShaderResourceView(),
+			{ thumbnailSize, thumbnailSize }, { -1, 0 }, { 0,1 },
+			-1, ImVec4(1.0f, 1.0f, 1.0f, 0.5f));
+
+
 		ImGui::Spacing();
 	}
 
