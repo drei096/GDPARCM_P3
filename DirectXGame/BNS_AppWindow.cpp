@@ -265,7 +265,7 @@ void BNS_AppWindow::render()
 	
 	BNS_UIManager::GetInstance()->DrawAllUIScreens();
 
-	m_swap_chain->present(true);
+	m_swap_chain->present(false);
 }
 
 void BNS_AppWindow::onUpdate()
@@ -459,7 +459,7 @@ void BNS_AppWindow::onUpdate()
 
 	BNS_UIManager::GetInstance()->DrawAllUIScreens();
 
-	m_swap_chain->present(true);
+	m_swap_chain->present(false);
 
 }
 

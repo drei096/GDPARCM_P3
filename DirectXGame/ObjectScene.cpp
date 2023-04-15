@@ -23,9 +23,7 @@ void ObjectScene::unloadObjects()
 
 	for (auto object : this->objectList) 
 	{
-		SceneManager::Instance()->objmutex->acquire();
 		BNS_GameObjectManager::get()->DeleteObject(object);
-		SceneManager::Instance()->objmutex->release();
 	}
 
 	this->objectList.clear();
