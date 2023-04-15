@@ -79,11 +79,11 @@ void ObjectLoader::onStartTask()
 	if (tempRef != nullptr) {
 		sceneRef->addObject(tempRef);
 		tempRef->SetActive(false);
+		this->execEvent->onFinishedExecution();
 	}
 
 	SceneManager::Instance()->objLoadSem->release();
 
-	this->execEvent->onFinishedExecution();
 	//delete after being done
 	delete this;
 }

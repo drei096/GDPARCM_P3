@@ -17,7 +17,6 @@ SceneManager::SceneManager()
 
 	this->sceneLoadSem = new IETSemaphore(1);
 	this->objLoadSem = new IETSemaphore(1);
-	this->objmutex = new IETSemaphore(1);
 
 	this->posList.push_back(Vector3D(0, 0, 0));
 	this->posList.push_back(Vector3D(2.5, 2.5, 2.5));
@@ -62,6 +61,18 @@ SceneManager::SceneManager()
 
 SceneManager::~SceneManager()
 {
+	for (auto scene : this->sceneList) {
+		delete scene;
+		scene = NULL;
+	}
+
+	delete this->threadPool;
+	delete this->sceneLoadSem;
+	delete this->objLoadSem;
+
+	this->sceneList.clear();
+	this->posList.clear();
+	this->occupiedList.clear();
 }
 
 void SceneManager::addScene(AScene* scene)
