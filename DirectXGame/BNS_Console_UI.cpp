@@ -6,7 +6,7 @@
 
 BNS_Console_UI::BNS_Console_UI(std::string name, int ID) : BNS_AUIScreen(name, ID)
 {
-	toShow = false;
+	toShow = true;
 }
 
 BNS_Console_UI::~BNS_Console_UI()
